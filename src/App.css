@@ -72,9 +72,13 @@ body{
 /* End of TopSection CSS */
 
 /* Services and ServiceCard CSS*/
+.services-section{
+    padding: 50px;
+}
 .service-cards {
     display: flex;
     justify-content: space-evenly;
+    gap: 20px;
 }
 
 .service-cards .service-card {
@@ -83,12 +87,25 @@ body{
 }
 /* End of Services and ServiceCard CSS */
 
+/* AboutUs CSS */
+
+/* End of AboutUs CSS */
+
 /* Footer CSS */
 .footer {
     background-color: var(--design-orange);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+    padding: 50px
+}
+.icons {
+    color: var(--design-blue);
+    text-decoration: none;
+}
+.footer p {
+    margin: 0px;
 }
 
 /* End of Footer CSS */
@@ -110,6 +127,10 @@ body{
     /* Services and ServiceCard CSS */
 
     /* End of Services and ServiceCard CSS */
+
+    /* AboutUs CSS */
+
+    /* End of AboutUs CSS */
 
     /* Footer CSS */
 
@@ -136,6 +157,10 @@ body{
 
     /* End of Services and ServiceCard CSS */
 
+    /* AboutUs CSS */
+
+    /* End of AboutUs CSS */
+    
     /* Footer CSS */
 
     /* End of Footer CSS */
