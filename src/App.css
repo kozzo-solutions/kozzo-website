@@ -11,9 +11,11 @@
 }
 
 body{
-    margin: 0; 
+    margin: 0;
+    background-color: var(--design-cream);
 }
 
+ /* Header CSS */
 .header {
     display: flex;
     justify-content: space-between;
@@ -49,18 +51,73 @@ body{
 .nav .hamburger-menu {
     display: none;
 }
+/* End of Header CSS */
 
+/* TopSection CSS */
+
+.top-section{
+    background-color: var(--design-orange);
+    display: flex;
+    font-family: var(--font-family);
+    color: var(--design-cream);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-section .project-button {
+    background-color: var(--design-blue);
+    color: var(--design-cream);
+}
+
+/* End of TopSection CSS */
+
+/* Services and ServiceCard CSS*/
+.service-cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.service-cards .service-card {
+
+    background-color: #FFFCF5;
+}
+/* End of Services and ServiceCard CSS */
+
+/* Footer CSS */
+.footer {
+    background-color: var(--design-orange);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* End of Footer CSS */
 @media only screen and (max-width: 1600px) {
 
+     /* Header CSS */
     .header .monitor-image {
         display: none;
     }
     .header .mobile-image {
         display: inline-flex;
     }
+    /*End of header CSS */
+
+    /* TopSection CSS */
+
+    /*End of TopSection CSS */
+
+    /* Services and ServiceCard CSS */
+
+    /* End of Services and ServiceCard CSS */
+
+    /* Footer CSS */
+
+    /* End of Footer CSS */
 }
 
 @media only screen and (max-width: 1000px) {
+     /* Header CSS*/
     .nav a {
         display: none;
     }
@@ -69,5 +126,18 @@ body{
         font-size: 64px;
         color: var(--design-cream);
     }
+    /* End of header CSS */
+
+    /* TopSection CSS */
+
+    /* End of TopSection CSS */
+
+    /* Services and ServiceCard CSS*/
+
+    /* End of Services and ServiceCard CSS */
+
+    /* Footer CSS */
+
+    /* End of Footer CSS */
 }
 
