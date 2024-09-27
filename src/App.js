@@ -1,10 +1,10 @@
 import './App.css';
+import Header from './components/header';
 
 function App() {
   return (
     <div className="App">
-        <h1>Hello world</h1>
-        <h2>Test webhook</h2>
+        <Header/>
     </div>
   );
 }
