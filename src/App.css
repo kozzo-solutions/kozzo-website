@@ -28,9 +28,12 @@ body{
 
  /* Header CSS */
 .header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: var(--design-orange);
+    position: fixed;
+    z-index: 1;
 }
 
 .header img {
@@ -73,12 +76,22 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: var(--sections-padding);
-    height: clamp(400px, 40vw, 600px);
+    padding-top: 150px;
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.2);
+}
+
+.top-section h1 {
+    font-size: clamp(30px, 6vw, 50px);
+}
+.top-section p {
+    font-size: clamp(20px, 3vw, 30px);
 }
 
 .top-section .project-button {
     background-color: var(--design-blue);
     color: var(--design-cream);
+    font-family: var(--font-family);
+    font-size: clamp(15px, 3vw, 25px);
 }
 
 .top-section-left-content {
@@ -123,12 +136,15 @@ body{
     padding: var(--sections-padding);
     color: var(--design-blue);
     display: flex;
+    border-bottom: var(--border-end-of-section);
+    margin-bottom: 50px;
 }
 
 .about-us-section .about-us-left-content {}
 
 .about-us-section .team-cards {
     display: flex;
+
 }
 
 .about-us-section .member-card h3{
@@ -140,7 +156,6 @@ body{
     height: auto;
     border-top-left-radius: 150px;
     border-bottom-right-radius: 150px;
-    margin-top: -150px;
 }
 
 .about-us-section .member-card .member-image-background {
@@ -151,6 +166,10 @@ body{
     background-color: var(--design-blue);
 }
 /* End of AboutUs CSS */
+
+/* ContactUs CSS */
+
+/* End of ContactUs CSS
 
 /* Footer CSS */
 .footer {
