@@ -8,6 +8,17 @@
     --design-blue: #19133e;
 
     --font-family: 'Onest';
+
+    --sections-padding: 50px;
+    --card-padding: 30px;
+
+    --border-end-of-section: solid 3px var(--design-orange);
+}
+
+h2 {
+    font-size: 40px;
+    color: var(--design-orange);
+    font-family: var(--font-family);
 }
 
 body{
@@ -23,7 +34,6 @@ body{
 }
 
 .header img {
-    width: 100%;
     max-width: 1137px;
     max-height: 141px;
 }
@@ -62,6 +72,8 @@ body{
     color: var(--design-cream);
     align-items: center;
     justify-content: space-between;
+    padding: var(--sections-padding);
+    height: clamp(400px, 40vw, 600px);
 }
 
 .top-section .project-button {
@@ -69,26 +81,75 @@ body{
     color: var(--design-cream);
 }
 
+.top-section-left-content {
+}
+
+.top-section img{
+    width: auto;
+    height: clamp(400px, 40vw, 600px);
+}
+
 /* End of TopSection CSS */
 
 /* Services and ServiceCard CSS*/
 .services-section{
-    padding: 50px;
+    padding: var(--sections-padding);
 }
 .service-cards {
     display: flex;
     justify-content: space-evenly;
     gap: 20px;
+    padding-bottom: 50px;
+    border-bottom: var(--border-end-of-section);
+    flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .service-cards .service-card {
-
+    padding: var(--card-padding);
     background-color: #FFFCF5;
+    font-family: var(--font-family);
+    color: var(--design-blue);
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    min-width: 200px;
+    max-width: 400px;
 }
 /* End of Services and ServiceCard CSS */
 
 /* AboutUs CSS */
+.about-us-section {
+    font-family: var(--font-family);
+    padding: var(--sections-padding);
+    color: var(--design-blue);
+    display: flex;
+}
 
+.about-us-section .about-us-left-content {}
+
+.about-us-section .team-cards {
+    display: flex;
+}
+
+.about-us-section .member-card h3{
+    margin: 0px;
+}
+
+.about-us-section .member-card img {
+    width: clamp(200px, 30vw, 400px);
+    height: auto;
+    border-top-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    margin-top: -150px;
+}
+
+.about-us-section .member-card .member-image-background {
+    width: clamp(200px, 30vw, 400px);
+    height: auto - 5px;
+    border-top-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    background-color: var(--design-blue);
+}
 /* End of AboutUs CSS */
 
 /* Footer CSS */
