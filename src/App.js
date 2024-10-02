@@ -9,12 +9,12 @@ import ContactUs from './components/contact-us';
 function App() {
   return (
     <div className="App">
-        <Header/>
-        <TopSection/>
-        <Services/>
-        <AboutUs/>
-        <ContactUs/>
-        <Footer/>
+      <Header />
+      <TopSection />
+      <Services />
+      <AboutUs />
+      <ContactUs />
+      <Footer />
     </div>
   );
 }
