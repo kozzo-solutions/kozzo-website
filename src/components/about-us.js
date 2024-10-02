@@ -1,6 +1,6 @@
 import React from 'react';
-import jonathanPicture from '../images/jonathan.png';
-import etiennePicture from '../images/etienne.png';
+import jonathanPicture from '../resources/images/jonathan.png';
+import etiennePicture from '../resources/images/etienne.png';
 import MemberCard from './member-card';
 
 const AboutUs = () => (

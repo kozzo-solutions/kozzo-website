@@ -1,10 +1,10 @@
 import React from 'react';
 
-const ServiceCard = (props) => (
+const ServiceCard = ({ icon, title, desc }) => (
   <div className="service-card">
-    {props.icon}
-    <h3>{props.title}</h3>
-    <p>{props.desc}</p>
+    {icon}
+    <h3>{title}</h3>
+    <p>{desc}</p>
   </div>
 );
 

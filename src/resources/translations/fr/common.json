@@ -1,0 +1,20 @@
+{
+    "header": {
+        "language": "FR",
+        "services": "Services",
+        "realisations": "Réalisations",
+        "about": "À propos",
+        "contact": "Contact"
+    },
+
+    "services": {
+        "web-design-code-title": "Développement Web avec code",
+        "web-design-code-desc": "Révolutionnez votre image numérique à l'aide de nos solutions web personnalisées. À l'aide de notre expertise en développement, Kozzo possède les compétences nécessaires permettant à votre organisation de se démarquer face à la concurrence.",
+        "web-design-no-code-title": "Conception Web sans code",
+        "web-design-no-code-desc": "Simplifiez la création de votre site avec notre service de conception sans code. Gagnez du temps et démarquez-vous avec des modèles prêts à l'emploi et sur-mesure.",
+        "software-solutions-title": "Création de solutions logicielles",
+        "software-solutions-desc": "Optimisez la performance de vos systèmes grâce à nos solutions logicielles adaptées à vos besoins. Chez Kozzo, nous concevons des solutions logicielles uniques qui répondent précisément aux besoins de votre organisation, que ce soit pour mesurer la performance, automatiser des processus ou faciliter vos opérations internes.",
+        "service-maintenance-title": "Maintenance des services",
+        "service-maintenance-desc": "Assurez la continuité de vos opérations grâce à notre service de maintenance complet. Développant des relations de confiance avec nos clients, nous veillons à ce que vos systèmes demeurent à jour tout en minimisant les interruptions et en maximisant la fiabilité."
+    }
+}

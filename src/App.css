@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
+body, html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --design-orange: #fd534a;
     --design-cream: #f9f3e7;
@@ -8,11 +14,22 @@
     --design-blue: #19133e;
 
     --font-family: 'Onest';
+    --font-xlarge: 50px;
+    --font-large: 30px;
+    --font-medium: 22px;
+    --font-small: 20px;
 
-    --sections-padding: 50px;
-    --card-padding: 30px;
+    --max-width: 1200px;
 
     --border-end-of-section: solid 3px var(--design-orange);
+}
+
+* {
+    font-family: var(--font-family);
+}
+
+a {
+    text-decoration: none !important;
 }
 
 h2 {
@@ -26,78 +43,11 @@ body{
     background-color: var(--design-cream);
 }
 
- /* Header CSS */
-.header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--design-orange);
-    position: fixed;
-    z-index: 1;
-}
-
-.header img {
-    max-width: 1137px;
-    max-height: 141px;
-}
-
-.header .mobile-image {
-    display: none;
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-    font-size: 22px;
-    font-family: var(--font-family);
-    font-weight: bold;
-    color: var(--design-blue);
-}
-
-.nav a{
-    color: inherit;
-    text-decoration: none;
-    padding-right: 30px;
-    padding-left: 30px;
-}
 
 .nav .hamburger-menu {
     display: none;
 }
 /* End of Header CSS */
-
-/* TopSection CSS */
-
-.top-section{
-    background-color: var(--design-orange);
-    display: flex;
-    font-family: var(--font-family);
-    color: var(--design-cream);
-    align-items: center;
-    justify-content: space-between;
-    padding: var(--sections-padding);
-    padding-top: 150px;
-    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.2);
-}
-
-.top-section h1 {
-    font-size: clamp(30px, 6vw, 50px);
-}
-.top-section p {
-    font-size: clamp(20px, 3vw, 30px);
-}
-
-.top-section .project-button {
-    background-color: var(--design-blue);
-    color: var(--design-cream);
-    font-family: var(--font-family);
-    font-size: clamp(15px, 3vw, 25px);
-}
-
-.top-section img{
-    width: auto;
-    height: clamp(400px, 40vw, 600px);
-}
 
 /* End of TopSection CSS */
 

@@ -1,12 +1,12 @@
 import React from 'react';
 
-const MemberCard = (props) => (
+const MemberCard = ({ name, role, picture }) => (
   <div className="member-card">
     <div className="member-image-background">
-      <img src={props.picture} alt={`${props.name}`} />
+      <img src={picture} alt={`${name}`} />
     </div>
-    <h3>{props.name}</h3>
-    <h3>{props.role}</h3>
+    <h3>{name}</h3>
+    <h3>{role}</h3>
   </div>
 );
 
