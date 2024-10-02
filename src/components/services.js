@@ -4,6 +4,7 @@ import ComputerIcon from '@mui/icons-material/Computer';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 import LanguageIcon from '@mui/icons-material/Language';
 import WebIcon from '@mui/icons-material/Web';
+import { useTranslation } from 'react-i18next';
 
 const Services = () => {
   const [t, i18n] = useTranslation('common');
@@ -34,6 +35,6 @@ const Services = () => {
         />
       </div>
     </div>
-  )
+  );
 };
 export default Services;
