@@ -94,9 +94,6 @@ body{
     font-size: clamp(15px, 3vw, 25px);
 }
 
-.top-section-left-content {
-}
-
 .top-section img{
     width: auto;
     height: clamp(400px, 40vw, 600px);
@@ -118,7 +115,7 @@ body{
     overflow: hidden;
 }
 
-.service-cards .service-card {
+.service-card {
     padding: var(--card-padding);
     background-color: #FFFCF5;
     font-family: var(--font-family);
@@ -140,25 +137,23 @@ body{
     margin-bottom: 50px;
 }
 
-.about-us-section .about-us-left-content {}
-
-.about-us-section .team-cards {
+.team-cards {
     display: flex;
 
 }
 
-.about-us-section .member-card h3{
+.member-card h3{
     margin: 0px;
 }
 
-.about-us-section .member-card img {
+.member-card img {
     width: clamp(200px, 30vw, 400px);
     height: auto;
     border-top-left-radius: 150px;
     border-bottom-right-radius: 150px;
 }
 
-.about-us-section .member-card .member-image-background {
+.member-image-background {
     width: clamp(200px, 30vw, 400px);
     height: auto - 5px;
     border-top-left-radius: 150px;
@@ -168,7 +163,79 @@ body{
 /* End of AboutUs CSS */
 
 /* ContactUs CSS */
+.contact-us-section {
+    padding: var(--sections-padding);
+}
 
+.contact-us-content {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contact-us-content-left {
+    background-color: var(--design-yellow);
+    font-family: var(--font-family);
+    color: var(--design-blue);
+    padding: 20px;
+    width: 50%;
+}
+
+.contact-infos{
+    border-bottom: solid 1px var(--design-blue);
+}
+
+.contact-info{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-us-content-right{
+    background-color: white;
+    padding: 20px;
+    width: 50%;
+    font-family: var(--font-family);
+    color: var(--design-blue);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-family: var(--font-family);
+}
+
+.client-personal-info{
+    display: flex;
+}
+
+.client-personal-info input{
+    min-width: 50%;
+}
+
+textarea {
+    resize: none;
+}
+  
+button {
+    background-color: var(--design-blue);
+    color: var(--design-cream);
+    font-family: var(--font-family);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.error {
+    font-family: var(--font-family);
+    color: red;
+    margin-top: 10px;
+    font-size: 0.8em;
+}
 /* End of ContactUs CSS
 
 /* Footer CSS */
@@ -178,7 +245,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 50px
+    padding: 50px;
 }
 .icons {
     color: var(--design-blue);
