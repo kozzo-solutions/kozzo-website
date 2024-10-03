@@ -1,10 +1,16 @@
 {
     "header": {
-        "language": "EN",
+        "language": "FR",
         "services": "Services",
         "realisations": "Projects",
         "about": "About us",
         "contact": "Contact"
+    },
+
+    "top-section": {
+        "main-sentence": "Propel your business into the world of tomorrow.",
+        "detailed-sentence": "Kozzo offers personalized digital solutions to meet your specific needs and streamline your digital integration.",
+        "button-text": "Let's talk about your project"
     },
 
     "services": {
@@ -17,5 +23,10 @@
         "software-solutions-desc": "Optimize your system's performance with our software solutions tailored to your needs. At Kozzo, we create unique software solutions that precisely meet your organization's requirements, whether it's for measuring performance, automating processes, or streamlining internal operations.",
         "service-maintenance-title": "Service Maintenance",
         "service-maintenance-desc": "Ensure the continuity of your operations with our comprehensive maintenance service. Building trusting relationships with our clients, we make sure your systems stay up-to-date while minimizing downtime and maximizing reliability."
+    },
+
+    "about-us": {
+        "kozzo-description": "We know that every digital project requires a tailored approach. Through close collaboration with our clients, we create customized solutions that enhance your visibility and ensure seamless integration, while adding value to your business. Join Kozzo to benefit from our technical expertise and turn your ideas into reality. Together, let’s propel your business into the world of tomorrow.",
+        "co-founder-title": "Co-Founder"
     }
 }
