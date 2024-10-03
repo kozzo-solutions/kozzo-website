@@ -52,29 +52,9 @@ body{
 /* End of TopSection CSS */
 
 /* Services and ServiceCard CSS*/
-.services-section{
-    padding: var(--sections-padding);
-}
-.service-cards {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 20px;
-    padding-bottom: 50px;
-    border-bottom: var(--border-end-of-section);
-    flex-wrap: wrap;
-    overflow: hidden;
-}
 
-.service-card {
-    padding: var(--card-padding);
-    background-color: #FFFCF5;
-    font-family: var(--font-family);
-    color: var(--design-blue);
-    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    min-width: 200px;
-    max-width: 400px;
-}
+
+
 /* End of Services and ServiceCard CSS */
 
 /* AboutUs CSS */

@@ -13,6 +13,7 @@ const SectionContainer = styled(Stack)`
   width: 100%;
   box-sizing: border-box;
   justify-content: center;
+  height: 80vh;
 
   > div {
     width: 60%;

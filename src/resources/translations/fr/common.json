@@ -8,6 +8,7 @@
     },
 
     "services": {
+        "services": "Nos services",
         "web-design-code-title": "Développement Web avec code",
         "web-design-code-desc": "Révolutionnez votre image numérique à l'aide de nos solutions web personnalisées. À l'aide de notre expertise en développement, Kozzo possède les compétences nécessaires permettant à votre organisation de se démarquer face à la concurrence.",
         "web-design-no-code-title": "Conception Web sans code",
