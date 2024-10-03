@@ -11,7 +11,7 @@ const Services = () => {
 
   return (
     <div className="services-section">
-      <h2>Services</h2>
+      <h2>{t("header.services")}</h2>
       <div className="service-cards">
         <ServiceCard
           icon={<LanguageIcon></LanguageIcon>}

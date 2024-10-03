@@ -2,6 +2,7 @@ import React from 'react';
 import blocs from '../resources/images/blocs.png';
 import { Stack, Typography } from '@mui/material';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 const SectionContainer = styled(Stack)`
   background-color: var(--design-orange);
@@ -33,24 +34,28 @@ const Button = styled.button`
   background-color: var(--design-blue);
 `;
 
-const TopSection = () => (
-  <SectionContainer direction="horizontal">
-    <Stack maxWidth="var(--max-width)" gap={'20px'}>
-      <Typography fontWeight="600" fontSize="var(--font-xlarge)">
-        Amenez votre entreprise vers le monde de demain
-      </Typography>
-      <Typography fontSize="var(--font-large)">
-        Nous proposons des solutions numériques personnalisées pour répondre à
-        vos besoins spécifiques et faciliter votre intégration digitale.
-      </Typography>
-      <Button style={{ width: 'min-content' }} variant="contained">
-        <Typography fontSize="var(--font-small)" whiteSpace="nowrap">
-          Parlons de votre projet
+const TopSection = () => {
+
+  const [t, i18n] = useTranslation('common');
+
+  return(
+    <SectionContainer direction="horizontal">
+      <Stack maxWidth="var(--max-width)" gap={'20px'}>
+        <Typography fontWeight="600" fontSize="var(--font-xlarge)">
+          {t('top-section.main-sentence')}
         </Typography>
-      </Button>
-    </Stack>
-    <img src={blocs} alt="blocs"></img>
-  </SectionContainer>
-);
+        <Typography fontSize="var(--font-large)">
+          {t('top-section.detailed-sentence')}
+        </Typography>
+        <Button style={{ width: 'min-content' }} variant="contained">
+          <Typography fontSize="var(--font-small)" whiteSpace="nowrap">
+            {t('top-section.button-text')}
+          </Typography>
+        </Button>
+      </Stack>
+      <img src={blocs} alt="blocs"></img>
+    </SectionContainer>
+  )
+};
 
 export default TopSection;
