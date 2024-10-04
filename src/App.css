@@ -33,9 +33,8 @@ a {
 }
 
 h2 {
-    font-size: 40px;
-    color: var(--design-orange);
-    font-family: var(--font-family);
+    font-size: 80px;
+    color: var(--design-blue);
 }
 
 body{

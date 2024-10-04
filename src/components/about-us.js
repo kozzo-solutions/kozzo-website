@@ -2,19 +2,16 @@ import React from 'react';
 import jonathanPicture from '../resources/images/jonathan.png';
 import etiennePicture from '../resources/images/etienne.png';
 import MemberCard from './member-card';
+import { Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 const AboutUs = () => {
-  const [t, i18n] = useTranslation('common');
+  const [t] = useTranslation('common');
 
   return(
-    <div className="about-us-section">
-      <div className="about-us-left-content">
-        <h2>{t("header.about")}</h2>
-        <p>
-          {t("about-us.kozzo-description")}
-        </p>
-        <div className="team-cards">
+    <Stack direction="horizontal" alignItems="center" maxWidth="var(--max-width)">
+      <Stack>
+        <Stack>
           <MemberCard
             name="Étienne Arsenault"
             role={t("about-us.co-founder-title")}
@@ -25,11 +22,26 @@ const AboutUs = () => {
             role={t("about-us.co-founder-title")}
             picture={jonathanPicture}
           />
-        </div>
-      </div>
-    </div>
+          <Typography
+            fontSize="var(--font-small)"
+            color="var(--design-blue)"
+            fontFamily="var(--font-familiy)"
+          >
+            {t("about-us.kozzo-description")}
+          </Typography>
+        </Stack>
+      </Stack> 
+        <Typography
+          variant="h1"
+          fontSize="80px"
+          fontWeight="600"
+          color="var(--design-blue)"
+          fontFamily="var(--font-familiy)"
+        >
+          Meet our team
+        </Typography>
+    </Stack>
   )
-  
 };
 
 export default AboutUs;
