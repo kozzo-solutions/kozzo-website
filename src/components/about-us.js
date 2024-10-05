@@ -38,7 +38,7 @@ const AboutUs = () => {
         color="var(--design-blue)"
         fontFamily="var(--font-familiy)"
       >
-        Meet our team
+        {t("about-us-title")}
       </Typography>
     </Stack>
   )

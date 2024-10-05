@@ -8,15 +8,21 @@ import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 import { Stack, Typography, Box } from '@mui/material';
 import { styled } from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
-const validationSchema = Yup.object({
-  name: Yup.string().required('Nom est requis'),
-  email: Yup.string().email('Courriel invalide').required('Courriel est requis'),
-  subject: Yup.string().required('Sujet est requis'),
-  message: Yup.string().required('Message est requis'),
-});
+
+
 
 const ContactUs = () => {
+
+  const [t] = useTranslation('common');
+  
+  const validationSchema = Yup.object({
+    name: Yup.string().required({t("contact-us.kozzo-description")}),
+    email: Yup.string().email('Courriel invalide').required('Courriel est requis'),
+    subject: Yup.string().required('Sujet est requis'),
+    message: Yup.string().required('Message est requis'),
+  });
 
   const sectionRef = useRef(null); // Create a ref for the ContactSection
 
@@ -129,7 +135,7 @@ const ContactUs = () => {
 
     resetForm();  // Resets the form fields after submission
   };
-  
+
   return (
     <Stack marginTop="100px">
       <Typography
@@ -155,27 +161,27 @@ const ContactUs = () => {
           </Typography>
           <Stack gap="10px" borderBottom="2px solid var(--design-blue)" paddingBottom="25px">
             <Stack direction="horizontal" alignItems="center" gap="20px">
-              <PhoneIcon style={{ width: '40px', height: '40px' }}/>
+              <PhoneIcon style={{ width: '40px', height: '40px' }} />
               <Typography fontSize="var(--font-medium)" color="var(--design-blue)">
                 +1(418)-930-4988
               </Typography>
             </Stack>
 
             <Stack direction="horizontal" alignItems="center" gap="20px">
-              <EmailIcon style={{ width: '40px', height: '40px' }}/>
+              <EmailIcon style={{ width: '40px', height: '40px' }} />
               <Typography fontSize="var(--font-medium)" color="var(--design-blue)">
                 admin@kozzo.ca
               </Typography>
             </Stack>
           </Stack>
-          
+
           <Box>
             <Typography fontSize="var(--font-medium)" color="var(--design-blue)" fontWeight="bold">
               Restons connectés
             </Typography>
             <Stack direction="horizontal">
-              <LinkedInIcon style={{ width: '50px', height: '50px' }}/>
-              <InstagramIcon style={{ width: '50px', height: '50px' }}/>
+              <LinkedInIcon style={{ width: '50px', height: '50px' }} />
+              <InstagramIcon style={{ width: '50px', height: '50px' }} />
             </Stack>
           </Box>
 
