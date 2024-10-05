@@ -26,7 +26,32 @@
     },
 
     "about-us": {
+        "about-us-title": "Meet our team",
         "kozzo-description": "We know that every digital project requires a tailored approach. Through close collaboration with our clients, we create customized solutions that enhance your visibility and ensure seamless integration, while adding value to your business. Join Kozzo to benefit from our technical expertise and turn your ideas into reality. Together, let’s propel your business into the world of tomorrow.",
-        "co-founder-title": "Co-founder"
+        "co-founder-title": "Co-Founder"
+    },
+
+    "contact-us": {
+        "contact-us-title": "Let's talk about your project !",
+        "need-help": "Need help with your IT project ?",
+        "contact-us-now": "Contact us now !",
+        "stay-connected": "Stay connected",
+        "how-can-we-help": "How can we help you ?",
+        "name-label": "Name",
+        "email-label": "Email",
+        "object-label": "Object",
+        "message-label": "Message",
+        "object-placeholder": "Let's work together !",
+        "message-placeholder": "Kozzo is excited to work with you !",
+        "submit-button": "Start your journey",
+        "name-error": "Name is required",
+        "email-error-required": "Email is required",
+        "email-error-invalid": "Invalid email",
+        "object-error": "Subject is required",
+        "message-error": "Message is required"
+    },
+
+    "footer": {
+        "rights-reserved": "All rights reserved by Kozzo ©2024"
     }
 }

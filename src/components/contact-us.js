@@ -141,9 +141,9 @@ const ContactUs = () => {
         fontFamily="var(--font-family)"
         alignSelf="center"
       >
-        Parlons de votre projet!
+        {t("contact-us.contact-us-title")}
       </Typography>
-      <ContactSection ref={sectionRef} className="fade-in-up">
+      <ContactSection>
         <Stack width="50%" height="100%" gap="30px">
           <Typography
             variant="h3"
@@ -202,8 +202,8 @@ const ContactUs = () => {
             fontWeight="bold"
             marginBottom="20px"
           >
-            Comment pouvons-nous vous aider?
-          </Typography>
+            {t("contact-us.how-can-we-help")}
+            </Typography>
           <Formik
             initialValues={{ name: '', email: '', subject: '', message: '' }}
             validationSchema={validationSchema}
