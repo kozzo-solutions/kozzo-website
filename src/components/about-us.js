@@ -38,7 +38,7 @@ const AboutUs = () => {
         color="var(--design-blue)"
         fontFamily="var(--font-familiy)"
       >
-        {t("about-us-title")}
+        {t("about-us.about-us-title")}
       </Typography>
     </Stack>
   )

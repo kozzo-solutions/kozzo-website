@@ -10,44 +10,16 @@ import { Stack, Typography, Box } from '@mui/material';
 import { styled } from 'styled-components';
 import { useTranslation } from 'react-i18next';
 
-
-
-
 const ContactUs = () => {
 
   const [t] = useTranslation('common');
-  
+
   const validationSchema = Yup.object({
-    name: Yup.string().required({t("contact-us.kozzo-description")}),
-    email: Yup.string().email('Courriel invalide').required('Courriel est requis'),
-    subject: Yup.string().required('Sujet est requis'),
-    message: Yup.string().required('Message est requis'),
+    name: Yup.string().required(t("contact-us.name-error")),
+    email: Yup.string().email(t("contact-us.email-error-invalid")).required(t("contact-us.email-error-required")),
+    subject: Yup.string().required(t("contact-us.object-error")),
+    message: Yup.string().required(t("contact-us.message-error")),
   });
-
-  const sectionRef = useRef(null); // Create a ref for the ContactSection
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-          }
-        });
-      },
-      { threshold: 0.1 } // Trigger when 10% of the section is visible
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
 
   const ContactSection = styled.div`
     width: 100%;
@@ -63,14 +35,6 @@ const ContactUs = () => {
     color: var(--design-blue);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     align-self: center;
-    /* Add animation class */
-    opacity: 0; 
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    transform: translateY(50px);
-    &.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
 
     @media (max-width: 1250px) {
       flex-direction: column;
@@ -146,9 +110,9 @@ const ContactUs = () => {
         fontFamily="var(--font-family)"
         alignSelf="center"
       >
-        Parlons de votre projet!
+        {t("contact-us.contact-us-title")}
       </Typography>
-      <ContactSection ref={sectionRef} className="fade-in-up">
+      <ContactSection>
         <Stack width="50%" height="100%" gap="30px">
 
           <Typography
@@ -157,7 +121,7 @@ const ContactUs = () => {
             color="var(--design-blue)"
             fontWeight="bold"
           >
-            Besoin d'aide avec votre projet technologique? <br /><br /> Contactez-nous dès maintenant!
+            {t("contact-us.need-help")} <br /><br /> {t("contact-us.contact-us-now")}
           </Typography>
           <Stack gap="10px" borderBottom="2px solid var(--design-blue)" paddingBottom="25px">
             <Stack direction="horizontal" alignItems="center" gap="20px">
@@ -177,7 +141,7 @@ const ContactUs = () => {
 
           <Box>
             <Typography fontSize="var(--font-medium)" color="var(--design-blue)" fontWeight="bold">
-              Restons connectés
+            {t("contact-us.stay-connected")}
             </Typography>
             <Stack direction="horizontal">
               <LinkedInIcon style={{ width: '50px', height: '50px' }} />
@@ -194,8 +158,8 @@ const ContactUs = () => {
             fontWeight="bold"
             marginBottom="20px"
           >
-            Comment pouvons-nous vous aider?
-          </Typography>
+            {t("contact-us.how-can-we-help")}
+            </Typography>
           <Formik
             initialValues={{ name: '', email: '', subject: '', message: '' }}
             validationSchema={validationSchema}
@@ -204,33 +168,33 @@ const ContactUs = () => {
             {() => (
               <Form>
                 <FieldDiv>
-                  <CustomLabel htmlFor='name' required>Nom</CustomLabel>
+                  <CustomLabel htmlFor='name' required>{t("contact-us.name-label")}</CustomLabel>
                   <FormField id='name' name="name" type="text" placeholder="Kozzo" />
                   <ErrorMessage name="name" component="div" className="error" />
                 </FieldDiv>
 
                 <FieldDiv>
-                  <CustomLabel htmlFor="email" required>Courriel</CustomLabel>
+                  <CustomLabel htmlFor="email" required>{t("contact-us.email-label")}</CustomLabel>
                   <FormField id="email" name="email" type="email" placeholder="admin@kozzo.ca" />
                   <ErrorMessage name="email" component="div" className="error" />
                 </FieldDiv>
 
 
                 <FieldDiv>
-                  <CustomLabel htmlFor="subject" required>Sujet</CustomLabel>
-                  <FormField id="subject" name="subject" type="text" placeholder="Let's work together!" />
+                  <CustomLabel htmlFor="subject" required>{t("contact-us.object-label")}</CustomLabel>
+                  <FormField id="subject" name="subject" type="text" placeholder={t("contact-us.object-placeholder")} />
                   <ErrorMessage name="subject" component="div" className="error" />
                 </FieldDiv>
 
 
                 <FieldDiv>
-                  <CustomLabel htmlFor='message' required>Message</CustomLabel>
-                  <FormField id='message' name="message" as="textarea" placeholder="Kozzo is looking forward to work with you!" />
+                  <CustomLabel htmlFor='message' required>{t("contact-us.message-label")}</CustomLabel>
+                  <FormField id='message' name="message" as="textarea" placeholder={t("contact-us.message-placeholder")} />
                   <ErrorMessage name="message" component="div" className="error" />
                 </FieldDiv>
 
 
-                <Button type="submit">Commencez votre aventure</Button>
+                <Button type="submit">{t("contact-us.submit-button")}</Button>
               </Form>
             )}
           </Formik>

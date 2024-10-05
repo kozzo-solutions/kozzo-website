@@ -32,22 +32,26 @@
     },
 
     "contact-us": {
-        "contact-us-title": "Let's talk about your project!",
-        "need-help": "Need help with your IT project?",
-        "contact-us-now": "Contact us now!",
+        "contact-us-title": "Let's talk about your project !",
+        "need-help": "Need help with your IT project ?",
+        "contact-us-now": "Contact us now !",
         "stay-connected": "Stay connected",
-        "how-can-we-help": "How can we help you?",
+        "how-can-we-help": "How can we help you ?",
         "name-label": "Name",
         "email-label": "Email",
-        "object-label": "Subject",
+        "object-label": "Object",
         "message-label": "Message",
-        "object-placeholder": "Let's work together!",
-        "message-placeholder": "Kozzo is excited to work with you!",
+        "object-placeholder": "Let's work together !",
+        "message-placeholder": "Kozzo is excited to work with you !",
         "submit-button": "Start your journey",
         "name-error": "Name is required",
         "email-error-required": "Email is required",
         "email-error-invalid": "Invalid email",
         "object-error": "Subject is required",
         "message-error": "Message is required"
+    },
+
+    "footer": {
+        "rights-reserved": "All rights reserved by Kozzo ©2024"
     }
 }
