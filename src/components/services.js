@@ -37,6 +37,7 @@ const Services = () => {
             fontSize="80px"
             fontWeight="600"
             color="var(--design-blue)"
+            fontFamily="var(--font-familiy)"
           >
             Learn more about our services
           </Typography>

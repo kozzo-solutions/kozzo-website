@@ -34,9 +34,8 @@ a {
 }
 
 h2 {
-    font-size: 40px;
-    color: var(--design-orange);
-    font-family: var(--font-family);
+    font-size: 80px;
+    color: var(--design-blue);
 }
 
 body{
@@ -242,5 +241,27 @@ button {
     /* Footer CSS */
 
     /* End of Footer CSS */
+}
+
+/*Animations*/
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0; /* Start invisible */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in-up.show {
+  opacity: 1;
+  animation: fadeInUp 0.5s ease-out forwards;
 }
 
