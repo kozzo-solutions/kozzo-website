@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -18,6 +18,31 @@ const validationSchema = Yup.object({
 
 const ContactUs = () => {
 
+  const sectionRef = useRef(null); // Create a ref for the ContactSection
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      },
+      { threshold: 0.1 } // Trigger when 10% of the section is visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const ContactSection = styled.div`
     width: 100%;
     max-width: var(--max-width);
@@ -32,6 +57,14 @@ const ContactUs = () => {
     color: var(--design-blue);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     align-self: center;
+    /* Add animation class */
+    opacity: 0; 
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transform: translateY(50px);
+    &.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     @media (max-width: 1250px) {
       flex-direction: column;
@@ -109,7 +142,7 @@ const ContactUs = () => {
       >
         Parlons de votre projet!
       </Typography>
-      <ContactSection>
+      <ContactSection ref={sectionRef} className="fade-in-up">
         <Stack width="50%" height="100%" gap="30px">
 
           <Typography
@@ -191,7 +224,7 @@ const ContactUs = () => {
                 </FieldDiv>
 
 
-                <Button type="submit">Commencer votre aventure</Button>
+                <Button type="submit">Commencez votre aventure</Button>
               </Form>
             )}
           </Formik>

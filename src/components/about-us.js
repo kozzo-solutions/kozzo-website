@@ -8,10 +8,10 @@ import { useTranslation } from 'react-i18next';
 const AboutUs = () => {
   const [t] = useTranslation('common');
 
-  return(
+  return (
     <Stack direction="horizontal" alignItems="center" maxWidth="var(--max-width)">
-      <Stack>
-        <Stack>
+      <Stack gap="50px">
+        <Stack direction="row" gap="50px">
           <MemberCard
             name="Étienne Arsenault"
             role={t("about-us.co-founder-title")}
@@ -22,24 +22,24 @@ const AboutUs = () => {
             role={t("about-us.co-founder-title")}
             picture={jonathanPicture}
           />
-          <Typography
-            fontSize="var(--font-small)"
-            color="var(--design-blue)"
-            fontFamily="var(--font-familiy)"
-          >
-            {t("about-us.kozzo-description")}
-          </Typography>
         </Stack>
-      </Stack> 
         <Typography
-          variant="h1"
-          fontSize="80px"
-          fontWeight="600"
+          fontSize="var(--font-small)"
           color="var(--design-blue)"
           fontFamily="var(--font-familiy)"
         >
-          Meet our team
+          {t("about-us.kozzo-description")}
         </Typography>
+      </Stack>
+      <Typography
+        variant="h1"
+        fontSize="80px"
+        fontWeight="600"
+        color="var(--design-blue)"
+        fontFamily="var(--font-familiy)"
+      >
+        Meet our team
+      </Typography>
     </Stack>
   )
 };
