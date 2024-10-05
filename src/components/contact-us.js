@@ -8,6 +8,76 @@ import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 import { Stack, Typography, Box } from '@mui/material';
 import { styled } from 'styled-components';
+import { useTranslation } from 'react-i18next';
+
+const ContactSection = styled.div`
+  width: 100%;
+  max-width: var(--max-width);
+  min-height: 500px;
+  border: 1px solid var(--design-blue);
+  display: flex;
+  background-color: white;
+  padding: 40px;
+  margin: 30px;
+  gap: 50px;
+  border-radius: 30px;
+  color: var(--design-blue);
+  align-self: center;
+  opacity: 0;
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out;
+  transform: translateY(50px);
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 1250px) {
+    flex-direction: column;
+    max-width: 80%;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+  }
+  @media (max-width: 725px) {
+    flex-direction: column;
+    max-width: 80%;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+  }
+`;
+
+const FieldDiv = styled.div`
+  margin-bottom: 20px;
+`;
+
+const FormField = styled(Field)`
+  border: 2px solid var(--design-blue);
+  width: 100%;
+`;
+
+const CustomLabel = styled.label`
+color: var(--design-blue);
+font-size: var(--font-medium)
+font-family: var(--font-family);
+font-weight: bold;
+`;
+
+const Button = styled.button`
+  padding: 12px !important;
+  font-size: var(--font-small) !important;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 20px;
+  color: var(--design-cream);
+  background-color: var(--design-blue);
+  @media (max-width: 1250px) {
+    width: 100%;
+  }
+`;
 
 const validationSchema = Yup.object({
   name: Yup.string().required('Nom est requis'),
@@ -19,6 +89,8 @@ const validationSchema = Yup.object({
 });
 
 const ContactUs = () => {
+  const { t } = useTranslation('common');
+
   const sectionRef = useRef(null); // Create a ref for the ContactSection
 
   useEffect(() => {
@@ -43,75 +115,6 @@ const ContactUs = () => {
       }
     };
   }, []);
-
-  const ContactSection = styled.div`
-    width: 100%;
-    max-width: var(--max-width);
-    min-height: 500px;
-    border: 1px solid var(--design-blue);
-    display: flex;
-    background-color: white;
-    padding: 40px;
-    margin: 30px;
-    gap: 50px;
-    border-radius: 30px;
-    color: var(--design-blue);
-    align-self: center;
-    opacity: 0;
-    transition:
-      opacity 0.5s ease-out,
-      transform 0.5s ease-out;
-    transform: translateY(50px);
-    &.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 1250px) {
-      flex-direction: column;
-      max-width: 80%;
-      padding: 20px;
-      gap: 20px;
-      align-items: center;
-    }
-    @media (max-width: 725px) {
-      flex-direction: column;
-      max-width: 80%;
-      padding: 20px;
-      gap: 20px;
-      align-items: center;
-    }
-  `;
-
-  const FieldDiv = styled.div`
-    margin-bottom: 20px;
-  `;
-
-  const FormField = styled(Field)`
-    border: 2px solid var(--design-blue);
-    width: 100%;
-  `;
-
-  const CustomLabel = styled.label`
-    color: var(--design-blue);
-    font-size: var(--font-medium)
-    font-family: var(--font-family);
-    font-weight: bold;
-  `;
-
-  const Button = styled.button`
-    padding: 12px !important;
-    font-size: var(--font-small) !important;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 20px;
-    color: var(--design-cream);
-    background-color: var(--design-blue);
-    @media (max-width: 1250px) {
-      width: 100%;
-    }
-  `;
 
   const handleSubmit = (values, { resetForm }) => {
     emailjs
@@ -141,7 +144,7 @@ const ContactUs = () => {
         fontFamily="var(--font-family)"
         alignSelf="center"
       >
-        {t("contact-us.contact-us-title")}
+        {t('contact-us.contact-us-title')}
       </Typography>
       <ContactSection>
         <Stack width="50%" height="100%" gap="30px">
@@ -202,8 +205,8 @@ const ContactUs = () => {
             fontWeight="bold"
             marginBottom="20px"
           >
-            {t("contact-us.how-can-we-help")}
-            </Typography>
+            {t('contact-us.how-can-we-help')}
+          </Typography>
           <Formik
             initialValues={{ name: '', email: '', subject: '', message: '' }}
             validationSchema={validationSchema}
