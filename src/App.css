@@ -242,3 +242,25 @@ button {
     /* End of Footer CSS */
 }
 
+/*Animations*/
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0; /* Start invisible */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in-up.show {
+  opacity: 1;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
