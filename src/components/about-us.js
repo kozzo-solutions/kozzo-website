@@ -42,7 +42,7 @@ const AboutUs = () => {
             color="var(--design-blue)"
             fontFamily="yugo-regular"
           >
-            About us
+            {t('about-us.about-us-title')}
           </Typography>
           <Separator />
         </Stack>

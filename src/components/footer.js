@@ -58,7 +58,7 @@ const Footer = () => {
           color="var(--design-blue)"
           fontWeight="bold"
         >
-          Tous droits réservés par Kozzo ©2024
+          {t("footer.rights-reserved")}
         </Typography>
       </Stack>
     </FooterComponent>

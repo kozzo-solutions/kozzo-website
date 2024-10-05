@@ -23,15 +23,6 @@ const ContactSection = styled.div`
   border-radius: 30px;
   color: var(--design-blue);
   align-self: center;
-  opacity: 0;
-  transition:
-    opacity 0.5s ease-out,
-    transform 0.5s ease-out;
-  transform: translateY(50px);
-  &.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
 
   @media (max-width: 1250px) {
     flex-direction: column;
@@ -79,42 +70,15 @@ const Button = styled.button`
   }
 `;
 
-const validationSchema = Yup.object({
-  name: Yup.string().required('Nom est requis'),
-  email: Yup.string()
-    .email('Courriel invalide')
-    .required('Courriel est requis'),
-  subject: Yup.string().required('Sujet est requis'),
-  message: Yup.string().required('Message est requis'),
-});
-
 const ContactUs = () => {
   const { t } = useTranslation('common');
 
-  const sectionRef = useRef(null); // Create a ref for the ContactSection
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-          }
-        });
-      },
-      { threshold: 0.1 }, // Trigger when 10% of the section is visible
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
+  const validationSchema = Yup.object({
+    name: Yup.string().required(t("contact-us.name-error")),
+    email: Yup.string().email(t("contact-us.email-error-invalid")).required(t("contact-us.email-error-required")),
+    subject: Yup.string().required(t("contact-us.object-error")),
+    message: Yup.string().required(t("contact-us.message-error")),
+  });
 
   const handleSubmit = (values, { resetForm }) => {
     emailjs
@@ -154,8 +118,7 @@ const ContactUs = () => {
             color="var(--design-blue)"
             fontWeight="bold"
           >
-            Besoin d'aide avec votre projet technologique? <br />
-            <br /> Contactez-nous dès maintenant!
+            {t("contact-us.need-help")} <br /><br /> {t("contact-us.contact-us-now")}
           </Typography>
           <Stack
             gap="10px"
@@ -189,7 +152,7 @@ const ContactUs = () => {
               color="var(--design-blue)"
               fontWeight="bold"
             >
-              Restons connectés
+              {t("contact-us.stay-connected")}
             </Typography>
             <Stack direction="horizontal">
               <LinkedInIcon style={{ width: '50px', height: '50px' }} />
@@ -216,7 +179,7 @@ const ContactUs = () => {
               <Form>
                 <FieldDiv>
                   <CustomLabel htmlFor="name" required>
-                    Nom
+                    {t("contact-us.name-label")}
                   </CustomLabel>
                   <FormField
                     id="name"
@@ -229,7 +192,7 @@ const ContactUs = () => {
 
                 <FieldDiv>
                   <CustomLabel htmlFor="email" required>
-                    Courriel
+                    {t("contact-us.email-label")}
                   </CustomLabel>
                   <FormField
                     id="email"
@@ -246,13 +209,13 @@ const ContactUs = () => {
 
                 <FieldDiv>
                   <CustomLabel htmlFor="subject" required>
-                    Sujet
+                    {t("contact-us.object-label")}
                   </CustomLabel>
                   <FormField
                     id="subject"
                     name="subject"
                     type="text"
-                    placeholder="Let's work together!"
+                    placeholder={t("contact-us.object-placeholder")}
                   />
                   <ErrorMessage
                     name="subject"
@@ -263,13 +226,13 @@ const ContactUs = () => {
 
                 <FieldDiv>
                   <CustomLabel htmlFor="message" required>
-                    Message
+                    {t("contact-us.message-label")}
                   </CustomLabel>
                   <FormField
                     id="message"
                     name="message"
                     as="textarea"
-                    placeholder="Kozzo is looking forward to work with you!"
+                    placeholder={t("contact-us.message-placeholder")}
                   />
                   <ErrorMessage
                     name="message"
@@ -278,7 +241,7 @@ const ContactUs = () => {
                   />
                 </FieldDiv>
 
-                <Button type="submit">Commencez votre aventure</Button>
+                <Button type="submit">{t("contact-us.submit-button")}</Button>
               </Form>
             )}
           </Formik>
