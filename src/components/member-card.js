@@ -1,24 +1,52 @@
-import { Typography } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 import React from 'react';
 import { styled } from 'styled-components';
 
 const Card = styled.div`
-  width: 400px;
-  height: fit-content;
-  background-color: var(--design-blue);
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-`;  
-const CardImage = styled.img`
-  width: 400px;
-  height: 400px;
+  width: 50%;
+  background-color: var(--design-green-light);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
 `;
 
+const CardImage = styled.img`
+  width: 60%;
+  height: auto;
+`;
+
+const Line = styled.div`
+  width: 1px;
+  height: 100%;
+  background-color: #a4b8b046;
+  margin: 20px 0;
+`;
 
 const MemberCard = ({ name, role, picture }) => (
   <Card>
-    <Typography paddingLeft="10px" paddingTop="10px" fontSize="var(--font-medium)" fontWeight="bold" color="var(--design-cream)">{name}</Typography>
-    <Typography paddingLeft="10px" paddingTop="5px" fontSize="var(--font-medium)" fontWeight="bold" color="var(--design-cream)">{role}</Typography>
     <CardImage src={picture} alt={`${name}`} />
+    <Stack
+      marginTop={3}
+      paddingRight={2}
+      alignItems="flex-end"
+      height="min-content"
+    >
+      <Typography
+        fontSize="var(--font-xmedium)"
+        fontWeight="bold"
+        color="var(--design-blue)"
+        whiteSpace="nowrap"
+      >
+        {name}
+      </Typography>
+      <Typography
+        fontSize="var(--font-small)"
+        fontWeight="400"
+        color="var(--design-blue)"
+      >
+        {role}
+      </Typography>
+    </Stack>
   </Card>
 );
 

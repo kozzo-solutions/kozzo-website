@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
+@font-face {
+    font-family: 'yugo-regular';
+    src: URL('./resources/fonts/YuGothR.ttc')
+  }
+
+@font-face {
+    font-family: 'yugo-bold';
+    src: URL('./resources/fonts/YuGothB.ttc')
+  }
+
+@font-face {
+    font-family: 'yugo-light';
+    src: URL('./resources/fonts/YuGothL.ttc')
+  }
+
+@font-face {
+    font-family: 'yugo-medium';
+    src: URL('./resources/fonts/YuGothM.ttc')
+}
+
 body, html {
     box-sizing: border-box;
     margin: 0;
@@ -7,15 +27,18 @@ body, html {
 }
 
 :root {
-    --design-orange: #fd534a;
-    --design-cream: #f9f3e7;
+    --design-orange: #6ebfa0;
+    --design-cream: #f6f6f6;
     --design-yellow: #febf32;
     --design-purple: #82175d;
-    --design-blue: #19133e;
+    --design-blue: #004c54;
+    --design-green: #6ebfa0;
+    --design-green-light: #6ebfa028;
 
     --font-family: 'Onest';
     --font-xlarge: 50px;
     --font-large: 30px;
+    --font-xmedium: 26px;
     --font-medium: 22px;
     --font-small: 20px;
 

@@ -8,7 +8,6 @@ const SectionContainer = styled(Stack)`
   background-color: var(--design-orange);
   display: flex;
   padding: 80px var(--side-padding);
-  font-family: var(--font-family);
   color: var(--design-cream);
   align-items: center;
   width: 100%;
@@ -35,10 +34,14 @@ const TopSection = () => {
     <SectionContainer direction="horizontal">
       <Stack maxWidth="var(--max-width)" direction="horizontal">
         <Stack width="60%" gap={'20px'}>
-          <Typography fontWeight="600" fontSize="var(--font-xlarge)">
+          <Typography
+            fontFamily="yugo-regular"
+            fontWeight="600"
+            fontSize="var(--font-xlarge)"
+          >
             {t('top-section.main-sentence')}
           </Typography>
-          <Typography fontSize="var(--font-large)">
+          <Typography fontFamily="yugo-regular" fontSize="var(--font-large)">
             {t('top-section.detailed-sentence')}
           </Typography>
           <Button style={{ width: 'min-content' }} variant="contained">
@@ -47,7 +50,7 @@ const TopSection = () => {
             </Typography>
           </Button>
         </Stack>
-        <img style={{width: '40%'}} src={blocs} alt="blocs"></img>
+        <img style={{ width: '40%' }}></img>
       </Stack>
     </SectionContainer>
   );

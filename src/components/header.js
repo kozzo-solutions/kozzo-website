@@ -31,7 +31,7 @@ const NavLink = styled(Link)`
   text-decoration: none;
   font-size: var(--font-medium) !important;
   color: var(--design-blue) !important;
-  font-weight: 600 !important;
+  font-family: yugo-medium !important;
 `;
 
 const LanguageButton = styled.button`

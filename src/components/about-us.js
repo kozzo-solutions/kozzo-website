@@ -4,44 +4,73 @@ import etiennePicture from '../resources/images/etienne.png';
 import MemberCard from './member-card';
 import { Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import styled from 'styled-components';
+
+const SectionContainer = styled(Stack)`
+  display: flex;
+  padding: 100px var(--side-padding) 20px var(--side-padding);
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+`;
+
+const Separator = styled.div`
+  width: 100%;
+  height: 1px;
+  background-color: var(--design-blue);
+  margin: 20px 0;
+`;
 
 const AboutUs = () => {
-  const [t] = useTranslation('common');
+  const { t } = useTranslation('common');
 
   return (
-    <Stack direction="horizontal" alignItems="center" maxWidth="var(--max-width)">
-      <Stack gap="50px">
-        <Stack direction="row" gap="50px">
-          <MemberCard
-            name="Étienne Arsenault"
-            role={t('about-us.co-founder-title')}
-            picture={etiennePicture}
-          />
-          <MemberCard
-            name="Jonathan Bessette"
-            role={t('about-us.co-founder-title')}
-            picture={jonathanPicture}
-          />
-        </Stack>
-        <Typography
-          fontSize="var(--font-small)"
-          color="var(--design-blue)"
-          fontFamily="var(--font-familiy)"
+    <SectionContainer>
+      <Stack width="100%" gap={2} maxWidth="var(--max-width)">
+        <Stack
+          direction="horizontal"
+          alignItems="center"
+          gap={4}
+          marginBottom={6}
         >
-          {t("about-us.kozzo-description")}
-        </Typography>
+          <Typography
+            whiteSpace="nowrap"
+            variant="h1"
+            fontSize="var(--font-xlarge)"
+            fontWeight="600"
+            color="var(--design-blue)"
+            fontFamily="yugo-regular"
+          >
+            About us
+          </Typography>
+          <Separator />
+        </Stack>
+        <Stack alignItems="center" textAlign="center" gap="80px">
+          <Typography
+            maxWidth="50%"
+            fontSize="var(--font-small)"
+            color="var(--design-blue)"
+            fontFamily="var(--font-family)"
+          >
+            {t('about-us.kozzo-description')}
+          </Typography>
+          <Stack direction="row" gap="50px">
+            <MemberCard
+              name="Étienne Arsenault"
+              role={t('about-us.co-founder-title')}
+              picture={etiennePicture}
+            />
+            <MemberCard
+              name="Jonathan Bessette"
+              role={t('about-us.co-founder-title')}
+              picture={jonathanPicture}
+            />
+          </Stack>
+        </Stack>
       </Stack>
-      <Typography
-        variant="h1"
-        fontSize="80px"
-        fontWeight="600"
-        color="var(--design-blue)"
-        fontFamily="var(--font-familiy)"
-      >
-        Meet our team
-      </Typography>
-    </Stack>
-  )
+    </SectionContainer>
+  );
 };
 
 export default AboutUs;

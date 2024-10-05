@@ -3,28 +3,34 @@ import React from 'react';
 import { styled } from 'styled-components';
 
 const Card = styled.div`
-  width: 240px;
+  width: 100%;
   height: 280px;
-  border: 1px solid var(--design-blue);
-  overflow: hidden;
-  padding: 20px;
+  padding: 40px 20px 20px 20px;
+  color: var(--design-blue);
+  transition: transform 0.3s ease-out;
 
-  > div {
-    transform: translateY(120px);
-    transition: transform 0.3s ease;
+  &:hover {
+    transform: translateY(-60px) !important;
   }
 
-  &:hover > div {
-    transform: translateY(0) !important;
+  .card-description {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+  }
+
+  &:hover .card-description {
+    opacity: 1;
   }
 `;
 
 const ServiceCard = ({ icon, title, desc }) => (
   <Card>
-    <div className="content">
+    <div className="content" style={{ textAlign: 'center' }}>
       {icon}
-      <Typography fontSize="var(--font-medium)">{title}</Typography>
-      <p>{desc}</p>
+      <Typography fontSize="var(--font-medium)" fontWeight="600">
+        {title}
+      </Typography>
+      <p className="card-description">{desc}</p>
     </div>
   </Card>
 );
