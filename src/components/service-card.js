@@ -3,18 +3,18 @@ import React from 'react';
 import { styled } from 'styled-components';
 
 const Card = styled.div`
-  width: 200px;
+  width: 240px;
   height: 280px;
   border: 1px solid var(--design-blue);
   overflow: hidden;
   padding: 20px;
 
   > div {
-    transform: translateY(200px);
+    transform: translateY(120px);
     transition: transform 0.3s ease;
   }
 
-  :hover > div {
+  &:hover > div {
     transform: translateY(0) !important;
   }
 `;

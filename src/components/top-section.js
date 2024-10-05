@@ -7,22 +7,15 @@ import { useTranslation } from 'react-i18next';
 const SectionContainer = styled(Stack)`
   background-color: var(--design-orange);
   display: flex;
-  padding: 80px 200px;
+  padding: 80px var(--side-padding);
   font-family: var(--font-family);
   color: var(--design-cream);
   align-items: center;
   width: 100%;
   box-sizing: border-box;
   justify-content: center;
-  height: 80vh;
-
-  > div {
-    width: 60%;
-  }
-
-  > img {
-    width: 40%;
-  }
+  height: calc(100vh - 80px);
+  position: relative;
 `;
 
 const Button = styled.button`
@@ -36,27 +29,28 @@ const Button = styled.button`
 `;
 
 const TopSection = () => {
+  const { t } = useTranslation('common');
 
-  const [t, i18n] = useTranslation('common');
-
-  return(
+  return (
     <SectionContainer direction="horizontal">
-      <Stack maxWidth="var(--max-width)" gap={'20px'}>
-        <Typography fontWeight="600" fontSize="var(--font-xlarge)">
-          {t('top-section.main-sentence')}
-        </Typography>
-        <Typography fontSize="var(--font-large)">
-          {t('top-section.detailed-sentence')}
-        </Typography>
-        <Button style={{ width: 'min-content' }} variant="contained">
-          <Typography fontSize="var(--font-small)" whiteSpace="nowrap">
-            {t('top-section.button-text')}
+      <Stack maxWidth="var(--max-width)" direction="horizontal">
+        <Stack width="60%" gap={'20px'}>
+          <Typography fontWeight="600" fontSize="var(--font-xlarge)">
+            {t('top-section.main-sentence')}
           </Typography>
-        </Button>
+          <Typography fontSize="var(--font-large)">
+            {t('top-section.detailed-sentence')}
+          </Typography>
+          <Button style={{ width: 'min-content' }} variant="contained">
+            <Typography fontSize="var(--font-small)" whiteSpace="nowrap">
+              {t('top-section.button-text')}
+            </Typography>
+          </Button>
+        </Stack>
+        <img style={{width: '40%'}} src={blocs} alt="blocs"></img>
       </Stack>
-      <img src={blocs} alt="blocs"></img>
     </SectionContainer>
-  )
+  );
 };
 
 export default TopSection;

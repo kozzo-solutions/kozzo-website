@@ -19,7 +19,8 @@ body, html {
     --font-medium: 22px;
     --font-small: 20px;
 
-    --max-width: 1200px;
+    --max-width: 1500px;
+    --side-padding: 80px;
 
     --border-end-of-section: solid 3px var(--design-orange);
 }

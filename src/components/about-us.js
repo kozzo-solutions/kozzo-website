@@ -7,29 +7,26 @@ import { useTranslation } from 'react-i18next';
 const AboutUs = () => {
   const [t, i18n] = useTranslation('common');
 
-  return(
+  return (
     <div className="about-us-section">
       <div className="about-us-left-content">
-        <h2>{t("header.about")}</h2>
-        <p>
-          {t("about-us.kozzo-description")}
-        </p>
+        <h2>{t('header.about')}</h2>
+        <p>{t('about-us.kozzo-description')}</p>
         <div className="team-cards">
           <MemberCard
             name="Étienne Arsenault"
-            role={t("about-us.co-founder-title")}
+            role={t('about-us.co-founder-title')}
             picture={etiennePicture}
           />
           <MemberCard
             name="Jonathan Bessette"
-            role={t("about-us.co-founder-title")}
+            role={t('about-us.co-founder-title')}
             picture={jonathanPicture}
           />
         </div>
       </div>
     </div>
-  )
-  
+  );
 };
 
 export default AboutUs;
