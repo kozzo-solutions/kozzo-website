@@ -32,7 +32,7 @@ const TopSection = () => {
 
   return (
     <SectionContainer direction="horizontal">
-      <Stack maxWidth="var(--max-width)" direction="horizontal">
+      <Stack maxWidth="var(--max-width)" direction="horizontal" alignItems="center">
         <Stack width="60%" gap={'20px'}>
           <Typography
             fontFamily="yugo-regular"
@@ -50,7 +50,7 @@ const TopSection = () => {
             </Typography>
           </Button>
         </Stack>
-        <img style={{ width: '40%' }}></img>
+        <img src={blocs} alt="blocs" style={{ width: '40%' }}></img>
       </Stack>
     </SectionContainer>
   );

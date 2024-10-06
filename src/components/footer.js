@@ -15,6 +15,9 @@ const Nav = styled.nav`
   display: flex;
   gap: 35px;
   padding: 10px;
+  @media (max-width: 550px) {
+    display: none;
+  }
 `;
 
 const NavLink = styled(Link)`

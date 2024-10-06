@@ -32,7 +32,6 @@ const ContactSection = styled.div`
     align-items: center;
   }
   @media (max-width: 725px) {
-    flex-direction: column;
     max-width: 80%;
     padding: 20px;
     gap: 20px;
@@ -46,7 +45,6 @@ const FieldDiv = styled.div`
 
 const FormField = styled(Field)`
   border: 2px solid var(--design-blue);
-  width: 100%;
 `;
 
 const CustomLabel = styled.label`
@@ -101,17 +99,29 @@ const ContactUs = () => {
   return (
     <Stack marginTop="100px">
       <Typography
+        textAlign="center"
         variant="h1"
-        fontSize="80px"
+        fontSize="var(--font-xlarge)"
         fontWeight="600"
         color="var(--design-blue)"
-        fontFamily="var(--font-family)"
-        alignSelf="center"
+        fontFamily="yugo-regular"
+        padding="20px  var(--side-padding) 20px var(--side-padding)"
       >
         {t('contact-us.contact-us-title')}
       </Typography>
       <ContactSection>
-        <Stack width="50%" height="100%" gap="30px">
+        <Stack 
+          sx={{
+            width:"50%", 
+            height:"100%", 
+            gap:"30px",
+            '@media (max-width: 1250px)':{
+              width: '70%'
+            },
+            '@media (max-width: 800px)':{
+              width: '90%'
+            }
+          }}>
           <Typography
             variant="h3"
             fontSize="var(--font-medium)"
@@ -160,7 +170,16 @@ const ContactUs = () => {
             </Stack>
           </Box>
         </Stack>
-        <Stack width="50%">
+        <Stack 
+          sx={{
+            width:"50%", 
+            '@media (max-width: 1250px)':{
+              width: '70%'
+            },
+            '@media (max-width: 800px)':{
+              width: '90%'
+            }
+          }}>
           <Typography
             variant="h2"
             fontSize="var(--font-large)"

@@ -18,8 +18,19 @@ const SectionContainer = styled(Stack)`
 `;
 
 const ServicesFlex = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   padding-top: 40px;
+
+  @media (max-width: 1300px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+
 `;
 
 const Separator = styled.div`

@@ -22,6 +22,16 @@ const Separator = styled.div`
   margin: 20px 0;
 `;
 
+const Members = styled.div`
+display: flex;
+gap: 50px;
+@media (max-width: 1300px) {
+  flex-direction: column;
+  align-items: center;
+}
+`;
+
+
 const AboutUs = () => {
   const { t } = useTranslation('common');
 
@@ -48,15 +58,23 @@ const AboutUs = () => {
         </Stack>
         <Stack alignItems="center" textAlign="center" gap="80px">
           <Typography
-            maxWidth="50%"
-            fontSize="var(--font-small)"
-            color="var(--design-blue)"
-            fontFamily="var(--font-family)"
+            sx={{
+              maxWidth: '50%',
+              fontSize: 'var(--font-small)',
+              color: 'var(--design-blue)',
+              fontFamily: 'var(--font-family)',
+              '@media (max-width: 1300px)': {
+                maxWidth: '70%',
+              },
+              '@media (max-width: 800px)': {
+                maxWidth: '100%'
+              },
+            }}
           >
             {t('about-us.kozzo-description')}<br/><br/><strong>{t('about-us.together')}</strong>
           </Typography>
 
-          <Stack direction="row" gap="50px">
+          <Members>
             <MemberCard
               name="Étienne Arsenault"
               role={t('about-us.co-founder-title')}
@@ -67,7 +85,7 @@ const AboutUs = () => {
               role={t('about-us.co-founder-title')}
               picture={jonathanPicture}
             />
-          </Stack>
+          </Members>
         </Stack>
       </Stack>
     </SectionContainer>
