@@ -8,7 +8,7 @@
     },
 
     "top-section": {
-        "main-sentence": "Propel your business into the world of tomorrow.",
+        "main-sentence": "Propel your business into the world of tomorrow",
         "detailed-sentence": "Kozzo offers personalized digital solutions to meet your specific needs and streamline your digital integration.",
         "button-text": "Let's talk about your project"
     },
@@ -16,18 +16,19 @@
     "services": {
         "title": "Our Services",
         "web-design-code-title": "Web Development with Code",
-        "web-design-code-desc": "Revolutionize your digital image with our customized web solutions. Leveraging our development expertise, Kozzo has the necessary skills to help your organization stand out from the competition.",
+        "web-design-code-desc": "Revolutionize your digital image with our customized web solutions. Kozzo's team possesses the development expertise needed to help your organization stand out from the competition.",
         "web-design-no-code-title": "No-Code Web Design",
-        "web-design-no-code-desc": "Simplify the creation of your website with our no-code design service. Save time and stand out with ready-to-use, tailor-made templates.",
-        "software-solutions-title": "Custom Software Solutions",
-        "software-solutions-desc": "Optimize your system's performance with our software solutions tailored to your needs. At Kozzo, we create unique software solutions that precisely meet your organization's requirements, whether it's for measuring performance, automating processes, or streamlining internal operations.",
+        "web-design-no-code-desc": "Simplify the creation of your website with our no-code design service. Save time and stand out with ready-made and customized templates.",
+        "software-solutions-title": "Creation of Software Solutions",
+        "software-solutions-desc": "Optimize your systems' performance with our software solutions tailored to your needs. Whether it's for measuring performance, automating processes, or streamlining internal operations, we are here for you.",
         "service-maintenance-title": "Service Maintenance",
-        "service-maintenance-desc": "Ensure the continuity of your operations with our comprehensive maintenance service. Building trusting relationships with our clients, we make sure your systems stay up-to-date while minimizing downtime and maximizing reliability."
+        "service-maintenance-desc": "Ensure the continuity of your operations with our comprehensive maintenance service. By building trusting relationships with our clients, we ensure your systems stay up-to-date while minimizing downtime and maximizing reliability."
     },
 
     "about-us": {
-        "about-us-title": "Meet our team",
-        "kozzo-description": "We know that every digital project requires a tailored approach. Through close collaboration with our clients, we create customized solutions that enhance your visibility and ensure seamless integration, while adding value to your business. Join Kozzo to benefit from our technical expertise and turn your ideas into reality. Together, let’s propel your business into the world of tomorrow.",
+        "about-us-title": "About Us",
+        "kozzo-description": "We know that every digital project requires a tailored approach. Through close collaboration with our clients, we create customized solutions that enhance your visibility and ensure seamless integration, while adding value to your business. Join Kozzo to benefit from our technical expertise and turn your ideas into reality.",
+        "together":"Together, let’s propel your business into the world of tomorrow.",
         "co-founder-title": "Co-Founder"
     },
 

@@ -4,6 +4,9 @@ import { useTranslation } from 'react-i18next';
 import { Stack, Typography } from '@mui/material';
 import styled from 'styled-components';
 import { PiDevicesThin } from 'react-icons/pi';
+import { PiLayoutThin } from "react-icons/pi";
+import { PiGraphLight } from "react-icons/pi";
+import { CiSettings } from "react-icons/ci";
 
 const SectionContainer = styled(Stack)`
   display: flex;
@@ -41,7 +44,7 @@ const Services = () => {
             color="var(--design-blue)"
             fontFamily="yugo-regular"
           >
-            Learn more about our services
+            {t('services.title')}
           </Typography>
           <Separator />
         </Stack>
@@ -52,17 +55,17 @@ const Services = () => {
             desc={t('services.web-design-code-desc')}
           />
           <ServiceCard
-            icon={<PiDevicesThin size="100px" />}
+            icon={<PiLayoutThin size="100px" />}
             title={t('services.web-design-no-code-title')}
             desc={t('services.web-design-no-code-desc')}
           />
           <ServiceCard
-            icon={<PiDevicesThin size="100px" />}
+            icon={<PiGraphLight size="100px" />}
             title={t('services.software-solutions-title')}
             desc={t('services.software-solutions-desc')}
           />
           <ServiceCard
-            icon={<PiDevicesThin size="100px" />}
+            icon={<CiSettings size="100px" />}
             title={t('services.service-maintenance-title')}
             desc={t('services.service-maintenance-desc')}
           />

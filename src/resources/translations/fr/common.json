@@ -14,20 +14,21 @@
     },
 
     "services": {
-        "services": "Nos services",
+        "title": "Nos services",
         "web-design-code-title": "Développement Web avec code",
-        "web-design-code-desc": "Révolutionnez votre image numérique à l'aide de nos solutions web personnalisées. À l'aide de notre expertise en développement, Kozzo possède les compétences nécessaires permettant à votre organisation de se démarquer face à la concurrence.",
+        "web-design-code-desc": "Révolutionnez votre image numérique à l'aide de nos solutions web personnalisées. L'équipe de Kozzo possède l'expertise en développement nécessaires permettant à votre organisation de se démarquer face à la concurrence.",
         "web-design-no-code-title": "Conception Web sans code",
         "web-design-no-code-desc": "Simplifiez la création de votre site avec notre service de conception sans code. Gagnez du temps et démarquez-vous avec des modèles prêts à l'emploi et sur-mesure.",
         "software-solutions-title": "Création de solutions logicielles",
-        "software-solutions-desc": "Optimisez la performance de vos systèmes grâce à nos solutions logicielles adaptées à vos besoins. Chez Kozzo, nous concevons des solutions logicielles uniques qui répondent précisément aux besoins de votre organisation, que ce soit pour mesurer la performance, automatiser des processus ou faciliter vos opérations internes.",
+        "software-solutions-desc": "Optimisez la performance de vos systèmes grâce à nos solutions logicielles adaptées à vos besoins. Que ce soit pour mesurer la performance, automatiser des processus ou faciliter vos opérations internes, nous sommes là pour vous.",
         "service-maintenance-title": "Maintenance des services",
         "service-maintenance-desc": "Assurez la continuité de vos opérations grâce à notre service de maintenance complet. Développant des relations de confiance avec nos clients, nous veillons à ce que vos systèmes demeurent à jour tout en minimisant les interruptions et en maximisant la fiabilité."
     },
 
     "about-us": {
-        "about-us-title": "Rencontrez notre équipe",
+        "about-us-title": "À propos",
         "kozzo-description": "Nous savons que chaque projet numérique nécessite une approche sur-mesure. Grâce à une collaboration étroite avec nos clients, nous créons des solutions adaptées qui améliorent votre visibilité et garantissent une intégration fluide, tout en apportant une valeur ajoutée à votre activité. Rejoignez Kozzo pour bénéficier de notre savoir-faire technique et transformer vos idées en réalité. Ensemble, propulsons votre entreprise vers le monde de demain.",
+        "together":"Ensemble, propulsons votre entreprise vers le monde de demain.",
         "co-founder-title": "Co-Fondateur"
     },
 

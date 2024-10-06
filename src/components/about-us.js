@@ -42,7 +42,7 @@ const AboutUs = () => {
             color="var(--design-blue)"
             fontFamily="yugo-regular"
           >
-            {t('about-us.about-us-title')}
+            {t("about-us.about-us-title")}
           </Typography>
           <Separator />
         </Stack>
@@ -53,8 +53,9 @@ const AboutUs = () => {
             color="var(--design-blue)"
             fontFamily="var(--font-family)"
           >
-            {t('about-us.kozzo-description')}
+            {t('about-us.kozzo-description')}<br/><br/><strong>{t('about-us.together')}</strong>
           </Typography>
+
           <Stack direction="row" gap="50px">
             <MemberCard
               name="Étienne Arsenault"
