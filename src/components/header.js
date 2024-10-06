@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import logoDescripteur from '../resources/images/kozzo-logo-descripteur.png';
 import logoNom from '../resources/images/kozzo-logo-nom-coul.png';
 import { styled } from 'styled-components';
-import { Link, Stack } from '@mui/material';
+import { Drawer, Link, Stack } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { RxHamburgerMenu } from "react-icons/rx";
-import { AiOutlineClose } from 'react-icons/ai'; // Import the close icon
 
 const Header = styled.header`
   width: 100%;
@@ -40,6 +39,7 @@ const LogoMobile = styled.img`
 const Nav = styled.nav`
   display: flex;
   gap: 35px;
+  align-items: center;
   @media (max-width: 1000px) {
     display: none;
   }
@@ -49,7 +49,6 @@ const NavLink = styled(Link)`
   text-decoration: none;
   font-size: var(--font-medium) !important;
   color: var(--design-blue) !important;
-  font-family: yugo-medium !important;
 `;
 
 const LanguageButton = styled.button`
@@ -63,26 +62,12 @@ const LanguageButton = styled.button`
   text-transform: uppercase;
 `;
 
-const SideMenu = styled.div`
-  position: fixed;
-  top: 0;
-  right: ${(props) => (props.open ? '0' : '-300px')}; /* Slide in/out */
-  width: 300px;
-  height: 100%;
-  background-color: var(--design-orange);
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  transition: right 0.3s ease-in-out; /* Animate slide */
-`;
-
-const CloseButton = styled.button`
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
+const HamburgerMenu = styled(RxHamburgerMenu)`
+  display: none;
+  @media (max-width: 1000px) {
+    display: block;
+  }
   cursor: pointer;
-  align-self: flex-end;
 `;
 
 const KozzoHeader = () => {
@@ -97,6 +82,14 @@ const KozzoHeader = () => {
     setMenuOpen((prev) => !prev);
   };
 
+  const toggleMenuAndScroll = (id) => {
+    if (menuOpen) {
+      setMenuOpen(false);
+    }
+
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <>
       <Header>
@@ -105,45 +98,33 @@ const KozzoHeader = () => {
 
         <Stack gap="60px" direction="horizontal">
           <Nav>
-            <NavLink href="#">{t('header.services')}</NavLink>
-            <NavLink href="#">{t('header.realisations')}</NavLink>
-            <NavLink href="#">{t('header.about')}</NavLink>
-            <NavLink href="#">{t('header.contact')}</NavLink>
+            <NavLink onClick={() => toggleMenuAndScroll("services")} href="#">{t('header.services')}</NavLink>
+            <NavLink onClick={() => toggleMenuAndScroll("about")} href="#">{t('header.about')}</NavLink>
+            <NavLink onClick={() => toggleMenuAndScroll("contact")} href="#">{t('header.contact')}</NavLink>
           </Nav>
           <LanguageButton onClick={toggleLanguage}>
             {t('header.language')}
           </LanguageButton>
-          <RxHamburgerMenu 
-            size="50px" 
-            onClick={toggleMenu} // Open the menu when clicked
-            style={{ display: 'inline' }}
-            sx={{
-              '@media (max-width: 1000px)': {
-                display: 'inline',
-              },
-            }}
+          <HamburgerMenu 
+            size="40px" 
+            onClick={toggleMenu}
           />
         </Stack>
       </Header>
 
-      {/* Side Menu */}
-      <SideMenu open={menuOpen}>
-        <CloseButton onClick={toggleMenu}>
-          <AiOutlineClose size="30px" />
-        </CloseButton>
-        <NavLink href="#" onClick={toggleMenu}>
+      <Drawer anchor="right"  open={menuOpen} onClose={() => setMenuOpen(false)}>
+        <Stack padding={12} gap={2}>
+        <NavLink href="#" onClick={() => toggleMenuAndScroll("services")}>
           {t('header.services')}
         </NavLink>
-        <NavLink href="#" onClick={toggleMenu}>
-          {t('header.realisations')}
-        </NavLink>
-        <NavLink href="#" onClick={toggleMenu}>
+        <NavLink href="#" onClick={() => toggleMenuAndScroll("about")}>
           {t('header.about')}
         </NavLink>
-        <NavLink href="#" onClick={toggleMenu}>
+        <NavLink href="#" onClick={() => toggleMenuAndScroll("contact")}>
           {t('header.contact')}
         </NavLink>
-      </SideMenu>
+        </Stack>
+      </Drawer>
     </>
   );
 };

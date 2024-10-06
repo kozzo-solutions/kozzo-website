@@ -8,6 +8,7 @@ const Card = styled.div`
   padding: 40px 20px 20px 20px;
   color: var(--design-blue);
   transition: transform 0.3s ease-out;
+  box-sizing: border-box;
 
   &:hover {
     transform: translateY(-60px) !important;
@@ -21,6 +22,7 @@ const Card = styled.div`
   &:hover .card-description {
     opacity: 1;
   }
+
 `;
 
 const ServiceCard = ({ icon, title, desc }) => (

@@ -36,7 +36,7 @@ const AboutUs = () => {
   const { t } = useTranslation('common');
 
   return (
-    <SectionContainer>
+    <SectionContainer id="about">
       <Stack width="100%" gap={2} maxWidth="var(--max-width)">
         <Stack
           direction="horizontal"
@@ -50,7 +50,6 @@ const AboutUs = () => {
             fontSize="var(--font-xlarge)"
             fontWeight="600"
             color="var(--design-blue)"
-            fontFamily="yugo-regular"
           >
             {t("about-us.about-us-title")}
           </Typography>
@@ -59,16 +58,10 @@ const AboutUs = () => {
         <Stack alignItems="center" textAlign="center" gap="80px">
           <Typography
             sx={{
-              maxWidth: '50%',
+              maxWidth: '700px',
               fontSize: 'var(--font-small)',
               color: 'var(--design-blue)',
               fontFamily: 'var(--font-family)',
-              '@media (max-width: 1300px)': {
-                maxWidth: '70%',
-              },
-              '@media (max-width: 800px)': {
-                maxWidth: '100%'
-              },
             }}
           >
             {t('about-us.kozzo-description')}<br/><br/><strong>{t('about-us.together')}</strong>

@@ -10,9 +10,8 @@ const Card = styled.div`
   padding: 0 30px;
   @media (max-width: 1150px) {
     flex-direction: column-reverse;
-    align-items: center;
-
   }
+    
   @media (max-width: 750px) {
     width: 70%;
   }
@@ -25,13 +24,6 @@ const CardImage = styled.img`
     min-width: 300px;
     width: 80%;
   }
-`;
-
-const Line = styled.div`
-  width: 1px;
-  height: 100%;
-  background-color: #a4b8b046;
-  margin: 20px 0;
 `;
 
 const MemberCard = ({ name, role, picture }) => (

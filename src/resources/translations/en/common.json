@@ -14,7 +14,7 @@
     },
 
     "services": {
-        "title": "Our Services",
+        "title": "Our services",
         "web-design-code-title": "Web Development with Code",
         "web-design-code-desc": "Revolutionize your digital image with our customized web solutions. Kozzo's team possesses the development expertise needed to help your organization stand out from the competition.",
         "web-design-no-code-title": "No-Code Web Design",
@@ -26,10 +26,10 @@
     },
 
     "about-us": {
-        "about-us-title": "About Us",
+        "about-us-title": "About us",
         "kozzo-description": "We know that every digital project requires a tailored approach. Through close collaboration with our clients, we create customized solutions that enhance your visibility and ensure seamless integration, while adding value to your business. Join Kozzo to benefit from our technical expertise and turn your ideas into reality.",
         "together":"Together, let’s propel your business into the world of tomorrow.",
-        "co-founder-title": "Co-Founder"
+        "co-founder-title": "Co-founder"
     },
 
     "contact-us": {
@@ -43,7 +43,7 @@
         "object-label": "Object",
         "message-label": "Message",
         "object-placeholder": "Let's work together !",
-        "message-placeholder": "Kozzo is excited to work with you !",
+        "message-placeholder": "What do you have in mind ?",
         "submit-button": "Start your journey",
         "name-error": "Name is required",
         "email-error-required": "Email is required",

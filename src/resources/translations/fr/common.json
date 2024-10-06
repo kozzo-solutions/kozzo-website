@@ -29,7 +29,7 @@
         "about-us-title": "À propos",
         "kozzo-description": "Nous savons que chaque projet numérique nécessite une approche sur-mesure. Grâce à une collaboration étroite avec nos clients, nous créons des solutions adaptées qui améliorent votre visibilité et garantissent une intégration fluide, tout en apportant une valeur ajoutée à votre activité. Rejoignez Kozzo pour bénéficier de notre savoir-faire technique et transformer vos idées en réalité. Ensemble, propulsons votre entreprise vers le monde de demain.",
         "together":"Ensemble, propulsons votre entreprise vers le monde de demain.",
-        "co-founder-title": "Co-Fondateur"
+        "co-founder-title": "Co-fondateur"
     },
 
     "contact-us":{
@@ -43,7 +43,7 @@
         "object-label": "Sujet",
         "message-label": "Message",
         "object-placeholder": "Travaillons ensemble !",
-        "message-placeholder": "Kozzo a très hâte de travailler avec vous !",
+        "message-placeholder": "Qu'avez-vous en tête ?",
         "submit-button": "Commencez votre aventure",
         "name-error": "Nom est requis",
         "email-error-required": "Courriel est requis",

@@ -30,7 +30,6 @@ const ServicesFlex = styled.div`
   @media (max-width: 800px) {
     grid-template-columns: 1fr;
   }
-
 `;
 
 const Separator = styled.div`
@@ -44,7 +43,7 @@ const Services = () => {
   const { t } = useTranslation('common');
 
   return (
-    <SectionContainer>
+    <SectionContainer id="services">
       <Stack width="100%" gap={2} maxWidth="var(--max-width)">
         <Stack direction="horizontal" alignItems="center" gap={4}>
           <Typography
@@ -53,7 +52,6 @@ const Services = () => {
             fontSize="var(--font-xlarge)"
             fontWeight="600"
             color="var(--design-blue)"
-            fontFamily="yugo-regular"
           >
             {t('services.title')}
           </Typography>

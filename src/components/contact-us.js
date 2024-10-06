@@ -1,46 +1,45 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
-import { Stack, Typography, Box } from '@mui/material';
+import { Stack, Typography, Link } from '@mui/material';
 import { styled } from 'styled-components';
 import { useTranslation } from 'react-i18next';
 
 const ContactSection = styled.div`
   width: 100%;
   max-width: var(--max-width);
-  min-height: 500px;
-  border: 1px solid var(--design-blue);
+  border: 1px solid var(--design-cream);
   display: flex;
   background-color: white;
   padding: 40px;
-  margin: 30px;
   gap: 50px;
-  border-radius: 30px;
+  border-radius: 10px;
   color: var(--design-blue);
   align-self: center;
+  align-items: flex-start;
+  margin-bottom: 100px;
 
   @media (max-width: 1250px) {
     flex-direction: column;
     max-width: 80%;
     padding: 20px;
     gap: 20px;
-    align-items: center;
   }
   @media (max-width: 725px) {
     max-width: 80%;
     padding: 20px;
     gap: 20px;
-    align-items: center;
   }
 `;
 
 const FieldDiv = styled.div`
   margin-bottom: 20px;
+
+  input, textarea {
+  box-sizing: border-box;}
 `;
 
 const FormField = styled(Field)`
@@ -66,6 +65,13 @@ const Button = styled.button`
   @media (max-width: 1250px) {
     width: 100%;
   }
+`;
+
+const Separator = styled.div`
+  width: 100%;
+  height: 1px;
+  background-color: var(--design-blue);
+  margin: 20px 0;
 `;
 
 const ContactUs = () => {
@@ -97,61 +103,52 @@ const ContactUs = () => {
   };
 
   return (
-    <Stack marginTop="100px">
+    <Stack id="contact" marginTop="100px">
       <Typography
         textAlign="center"
         variant="h1"
         fontSize="var(--font-xlarge)"
         fontWeight="600"
         color="var(--design-blue)"
-        fontFamily="yugo-regular"
-        padding="20px  var(--side-padding) 20px var(--side-padding)"
+        padding="20px var(--side-padding) 20px var(--side-padding)"
       >
         {t('contact-us.contact-us-title')}
       </Typography>
       <ContactSection>
-        <Stack 
+        {/* <Stack 
           sx={{
-            width:"50%", 
+            width:"min-content", 
             height:"100%", 
-            gap:"30px",
-            '@media (max-width: 1250px)':{
-              width: '70%'
-            },
-            '@media (max-width: 800px)':{
-              width: '90%'
-            }
+            gap:"30px"
           }}>
           <Typography
             variant="h3"
-            fontSize="var(--font-medium)"
+            fontSize="var(--font-xmedium)"
             color="var(--design-blue)"
-            fontWeight="bold"
+            fontWeight="600"
           >
-            {t("contact-us.need-help")} <br /><br /> {t("contact-us.contact-us-now")}
+           {t("contact-us.contact-us-now")}
           </Typography>
           <Stack
             gap="10px"
-            borderBottom="2px solid var(--design-blue)"
-            paddingBottom="25px"
           >
             <Stack direction="horizontal" alignItems="center" gap="20px">
-              <PhoneIcon style={{ width: '40px', height: '40px' }} />
+              <PhoneIcon style={{ width: '30px', height: '30px' }} />
               <Typography
-                fontSize="var(--font-medium)"
+                fontSize="var(--font-small)"
                 color="var(--design-blue)"
               >
-                +1(418)-930-4988
+                +1 (418) 930-4988
               </Typography>
             </Stack>
 
             <Stack direction="horizontal" alignItems="center" gap="20px">
-              <EmailIcon style={{ width: '40px', height: '40px' }} />
+              <EmailIcon style={{ width: '30px', height: '30px' }} />
               <Typography
-                fontSize="var(--font-medium)"
+                fontSize="var(--font-small)"
                 color="var(--design-blue)"
               >
-                admin@kozzo.ca
+                <Link href="mailto:admin@kozzo.ca">admin@kozzo.ca</Link>
               </Typography>
             </Stack>
           </Stack>
@@ -165,30 +162,15 @@ const ContactUs = () => {
               {t("contact-us.stay-connected")}
             </Typography>
             <Stack direction="horizontal">
-              <LinkedInIcon style={{ width: '50px', height: '50px' }} />
-              <InstagramIcon style={{ width: '50px', height: '50px' }} />
+              <LinkedInIcon style={{ width: '40px', height: '40px' }} />
+              <InstagramIcon style={{ width: '40px', height: '40px' }} />
             </Stack>
           </Box>
-        </Stack>
+        </Stack> */}
         <Stack 
           sx={{
-            width:"50%", 
-            '@media (max-width: 1250px)':{
-              width: '70%'
-            },
-            '@media (max-width: 800px)':{
-              width: '90%'
-            }
+            width:"100%", 
           }}>
-          <Typography
-            variant="h2"
-            fontSize="var(--font-large)"
-            color="var(--design-blue)"
-            fontWeight="bold"
-            marginBottom="20px"
-          >
-            {t('contact-us.how-can-we-help')}
-          </Typography>
           <Formik
             initialValues={{ name: '', email: '', subject: '', message: '' }}
             validationSchema={validationSchema}
@@ -204,9 +186,9 @@ const ContactUs = () => {
                     id="name"
                     name="name"
                     type="text"
-                    placeholder="Kozzo"
+                    
                   />
-                  <ErrorMessage name="name" component="div" className="error" />
+                  <ErrorMessage  name="name" component="div" className="error" />
                 </FieldDiv>
 
                 <FieldDiv>
@@ -217,7 +199,6 @@ const ContactUs = () => {
                     id="email"
                     name="email"
                     type="email"
-                    placeholder="admin@kozzo.ca"
                   />
                   <ErrorMessage
                     name="email"
@@ -260,7 +241,7 @@ const ContactUs = () => {
                   />
                 </FieldDiv>
 
-                <Button type="submit">{t("contact-us.submit-button")}</Button>
+                <Button style={{fontWeight: "400"}} type="submit">{t("contact-us.submit-button")}</Button>
               </Form>
             )}
           </Formik>

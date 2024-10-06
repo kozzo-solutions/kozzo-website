@@ -35,13 +35,12 @@ const TopSection = () => {
       <Stack maxWidth="var(--max-width)" direction="horizontal" alignItems="center">
         <Stack width="60%" gap={'20px'}>
           <Typography
-            fontFamily="yugo-regular"
             fontWeight="600"
             fontSize="var(--font-xlarge)"
           >
             {t('top-section.main-sentence')}
           </Typography>
-          <Typography fontFamily="yugo-regular" fontSize="var(--font-large)">
+          <Typography fontSize="var(--font-large)">
             {t('top-section.detailed-sentence')}
           </Typography>
           <Button style={{ width: 'min-content' }} variant="contained">
