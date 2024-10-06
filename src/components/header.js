@@ -98,9 +98,9 @@ const KozzoHeader = () => {
 
         <Stack gap="60px" direction="horizontal">
           <Nav>
-            <NavLink onClick={() => toggleMenuAndScroll("services")} href="#">{t('header.services')}</NavLink>
-            <NavLink onClick={() => toggleMenuAndScroll("about")} href="#">{t('header.about')}</NavLink>
-            <NavLink onClick={() => toggleMenuAndScroll("contact")} href="#">{t('header.contact')}</NavLink>
+            <NavLink onClick={() => toggleMenuAndScroll("services")}>{t('header.services')}</NavLink>
+            <NavLink onClick={() => toggleMenuAndScroll("about")}>{t('header.about')}</NavLink>
+            <NavLink onClick={() => toggleMenuAndScroll("contact")}>{t('header.contact')}</NavLink>
           </Nav>
           <LanguageButton onClick={toggleLanguage}>
             {t('header.language')}
@@ -114,13 +114,13 @@ const KozzoHeader = () => {
 
       <Drawer anchor="right"  open={menuOpen} onClose={() => setMenuOpen(false)}>
         <Stack padding={12} gap={2}>
-        <NavLink href="#" onClick={() => toggleMenuAndScroll("services")}>
+        <NavLink onClick={() => toggleMenuAndScroll("services")}>
           {t('header.services')}
         </NavLink>
-        <NavLink href="#" onClick={() => toggleMenuAndScroll("about")}>
+        <NavLink onClick={() => toggleMenuAndScroll("about")}>
           {t('header.about')}
         </NavLink>
-        <NavLink href="#" onClick={() => toggleMenuAndScroll("contact")}>
+        <NavLink onClick={() => toggleMenuAndScroll("contact")}>
           {t('header.contact')}
         </NavLink>
         </Stack>

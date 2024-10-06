@@ -54,6 +54,7 @@ body, html {
 
 a {
     text-decoration: none !important;
+    cursor: pointer;
 }
 
 h2 {
