@@ -6,7 +6,6 @@ import AboutUs from './components/about-us';
 import Footer from './components/footer';
 import ContactUs from './components/contact-us';
 import { Stack } from '@mui/material';
-import "./i18n"
 
 function App() { 
   return (
