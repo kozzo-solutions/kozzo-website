@@ -17,6 +17,10 @@ const Header = styled.header`
   height: 80px;
   padding: 20px 50px;
   box-sizing: border-box;
+
+  @media (max-width: 750px) {
+    padding: 20px 20px;
+  }
 `;
 
 const LogoMonitor = styled.img`
@@ -111,10 +115,10 @@ const KozzoHeader = () => {
             <NavLink onClick={() => toggleMenuAndScroll('contact')}>
               {t('header.contact')}
             </NavLink>
+            <LanguageButton onClick={toggleLanguage}>
+              {t('header.language')}
+            </LanguageButton>
           </Nav>
-          <LanguageButton onClick={toggleLanguage}>
-            {t('header.language')}
-          </LanguageButton>
           <HamburgerMenu size="40px" onClick={toggleMenu} />
         </Stack>
       </Header>
@@ -130,6 +134,9 @@ const KozzoHeader = () => {
           <NavLink onClick={() => toggleMenuAndScroll('contact')}>
             {t('header.contact')}
           </NavLink>
+          <LanguageButton onClick={toggleLanguage}>
+              {t('header.language')}
+          </LanguageButton>
         </Stack>
       </Drawer>
     </>

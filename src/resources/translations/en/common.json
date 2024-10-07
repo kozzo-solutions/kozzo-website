@@ -1,4 +1,8 @@
 {
+    "app-title": {
+        "title": "Kozzo - Digital Solutions"
+    },
+
     "header": {
         "language": "FR",
         "services": "Services",
@@ -44,7 +48,7 @@
         "message-label": "Message",
         "object-placeholder": "Let's work together !",
         "message-placeholder": "What do you have in mind ?",
-        "submit-button": "Start your journey",
+        "submit-button": "Begin your journey !",
         "name-error": "Name is required",
         "email-error-required": "Email is required",
         "email-error-invalid": "Invalid email",
