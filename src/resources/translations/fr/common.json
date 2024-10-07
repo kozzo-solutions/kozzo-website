@@ -9,7 +9,7 @@
 
     "top-section": {
         "main-sentence": "Propulsez votre entreprise vers le monde de demain",
-        "detailed-sentence": "Kozzo propose des solutions numériques personnalisées pour répondre à vos besoins spécifiques et faciliter votre intégration digitale.",
+        "detailed-sentence": "Des solutions numériques personnalisées qui répondent à vos besoins spécifiques et facilitent votre intégration digitale.",
         "button-text": "Parlons de votre projet"
     },
 
@@ -53,6 +53,6 @@
     },
 
     "footer": {
-        "rights-reserved": "Tous droits réservés par Kozzo ©2024"
+        "rights-reserved": "© 2024 Kozzo. Tous droits réservés."
     }
 }

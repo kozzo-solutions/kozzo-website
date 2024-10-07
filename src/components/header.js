@@ -14,7 +14,7 @@ const Header = styled.header`
   background-color: var(--design-orange);
   position: fixed;
   z-index: 1;
-  height: 100px;
+  height: 80px;
   padding: 20px 50px;
   box-sizing: border-box;
 `;
@@ -90,11 +90,15 @@ const KozzoHeader = () => {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+  };
+
   return (
     <>
       <Header>
-        <LogoMonitor src={logoDescripteur} alt="logo" />
-        <LogoMobile src={logoNom} alt="logo" />
+        <LogoMonitor onClick={scrollToTop} src={logoDescripteur} alt="logo" />
+        <LogoMobile onClick={scrollToTop} src={logoNom} alt="logo" />
 
         <Stack gap="60px" direction="horizontal">
           <Nav>
