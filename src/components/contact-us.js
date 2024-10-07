@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
+import { CiLinkedin } from "react-icons/ci";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
@@ -11,7 +12,6 @@ import { useTranslation } from 'react-i18next';
 const ContactSection = styled.div`
   width: 100%;
   max-width: var(--max-width);
-  border: 1px solid var(--design-cream);
   display: flex;
   background-color: white;
   padding: 40px;
@@ -21,6 +21,7 @@ const ContactSection = styled.div`
   align-self: center;
   align-items: flex-start;
   margin-bottom: 100px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;  
 
   @media (max-width: 1250px) {
     flex-direction: column;
@@ -35,13 +36,22 @@ const ContactSection = styled.div`
   }
 `;
 
+const ContactInfosContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @media (max-width: 1250px){
+    flex-direction:"row";
+    width: 100%;
+    justify-content: center;
+  }
+`;
+
 const FieldDiv = styled.div`
   margin-bottom: 20px;
 
-  input,
-  textarea {
-    box-sizing: border-box;
-  }
+  input, textarea {
+  box-sizing: border-box;}
 `;
 
 const FormField = styled(Field)`
@@ -76,16 +86,24 @@ const Separator = styled.div`
   margin: 20px 0;
 `;
 
+const ConfirmationBox = styled.div`
+  margin-top: 20px;
+  padding: 10px;
+  background-color: var(--design-cream);
+  color: var(--design-blue);
+  border: 2px solid var(--design-blue);
+  border-radius: 10px;
+`;
+
 const ContactUs = () => {
   const { t } = useTranslation('common');
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const validationSchema = Yup.object({
-    name: Yup.string().required(t('contact-us.name-error')),
-    email: Yup.string()
-      .email(t('contact-us.email-error-invalid'))
-      .required(t('contact-us.email-error-required')),
-    subject: Yup.string().required(t('contact-us.object-error')),
-    message: Yup.string().required(t('contact-us.message-error')),
+    name: Yup.string().required(t("contact-us.name-error")),
+    email: Yup.string().email(t("contact-us.email-error-invalid")).required(t("contact-us.email-error-required")),
+    subject: Yup.string().required(t("contact-us.object-error")),
+    message: Yup.string().required(t("contact-us.message-error")),
   });
 
   const handleSubmit = (values, { resetForm }) => {
@@ -98,12 +116,12 @@ const ContactUs = () => {
       )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
+        setIsSubmitted(true); 
+        resetForm(); 
       })
       .catch((error) => {
         console.error('FAILED...', error);
       });
-
-    resetForm(); // Resets the form fields after submission
   };
 
   return (
@@ -119,11 +137,13 @@ const ContactUs = () => {
         {t('contact-us.contact-us-title')}
       </Typography>
       <ContactSection>
-        {/* <Stack 
+        {<Stack 
           sx={{
             width:"min-content", 
             height:"100%", 
-            gap:"30px"
+            gap:"30px",
+            paddingBottom: "30px",
+            borderBottom:"2px solid var(--design-blue)"
           }}>
           <Typography
             variant="h3"
@@ -133,10 +153,12 @@ const ContactUs = () => {
           >
            {t("contact-us.contact-us-now")}
           </Typography>
-          <Stack
-            gap="10px"
-          >
-            <Stack direction="horizontal" alignItems="center" gap="20px">
+          <ContactInfosContainer>
+            <Stack 
+              direction="horizontal" 
+              alignItems="center" 
+              gap="20px"
+            >
               <PhoneIcon style={{ width: '30px', height: '30px' }} />
               <Typography
                 fontSize="var(--font-small)"
@@ -155,27 +177,12 @@ const ContactUs = () => {
                 <Link href="mailto:admin@kozzo.ca">admin@kozzo.ca</Link>
               </Typography>
             </Stack>
-          </Stack>
-
-          <Box>
-            <Typography
-              fontSize="var(--font-medium)"
-              color="var(--design-blue)"
-              fontWeight="bold"
-            >
-              {t("contact-us.stay-connected")}
-            </Typography>
-            <Stack direction="horizontal">
-              <LinkedInIcon style={{ width: '40px', height: '40px' }} />
-              <InstagramIcon style={{ width: '40px', height: '40px' }} />
-            </Stack>
-          </Box>
-        </Stack> */}
-        <Stack
+          </ContactInfosContainer>
+        </Stack>}
+        <Stack 
           sx={{
-            width: '100%',
-          }}
-        >
+            width:"100%",
+          }}>
           <Formik
             initialValues={{ name: '', email: '', subject: '', message: '' }}
             validationSchema={validationSchema}
@@ -185,17 +192,26 @@ const ContactUs = () => {
               <Form>
                 <FieldDiv>
                   <CustomLabel htmlFor="name" required>
-                    {t('contact-us.name-label')}
+                    {t("contact-us.name-label")}
                   </CustomLabel>
-                  <FormField id="name" name="name" type="text" />
-                  <ErrorMessage name="name" component="div" className="error" />
+                  <FormField
+                    id="name"
+                    name="name"
+                    type="text"
+                    
+                  />
+                  <ErrorMessage  name="name" component="div" className="error" />
                 </FieldDiv>
 
                 <FieldDiv>
                   <CustomLabel htmlFor="email" required>
-                    {t('contact-us.email-label')}
+                    {t("contact-us.email-label")}
                   </CustomLabel>
-                  <FormField id="email" name="email" type="email" />
+                  <FormField
+                    id="email"
+                    name="email"
+                    type="email"
+                  />
                   <ErrorMessage
                     name="email"
                     component="div"
@@ -205,13 +221,13 @@ const ContactUs = () => {
 
                 <FieldDiv>
                   <CustomLabel htmlFor="subject" required>
-                    {t('contact-us.object-label')}
+                    {t("contact-us.object-label")}
                   </CustomLabel>
                   <FormField
                     id="subject"
                     name="subject"
                     type="text"
-                    placeholder={t('contact-us.object-placeholder')}
+                    placeholder={t("contact-us.object-placeholder")}
                   />
                   <ErrorMessage
                     name="subject"
@@ -222,13 +238,13 @@ const ContactUs = () => {
 
                 <FieldDiv>
                   <CustomLabel htmlFor="message" required>
-                    {t('contact-us.message-label')}
+                    {t("contact-us.message-label")}
                   </CustomLabel>
                   <FormField
                     id="message"
                     name="message"
-                    as="textarea"
-                    placeholder={t('contact-us.message-placeholder')}
+                    component="textarea"
+                    placeholder={t("contact-us.message-placeholder")}
                   />
                   <ErrorMessage
                     name="message"
@@ -237,12 +253,15 @@ const ContactUs = () => {
                   />
                 </FieldDiv>
 
-                <Button style={{ fontWeight: '400' }} type="submit">
-                  {t('contact-us.submit-button')}
-                </Button>
+                <Button style={{fontWeight: "400"}} type="submit">{t("contact-us.submit-button")}</Button>
               </Form>
             )}
           </Formik>
+          {isSubmitted && (
+            <ConfirmationBox>
+              {t("contact-us.confirmation-message")}
+            </ConfirmationBox>
+          )}
         </Stack>
       </ContactSection>
     </Stack>
