@@ -79,13 +79,6 @@ const Button = styled.button`
   }
 `;
 
-const Separator = styled.div`
-  width: 100%;
-  height: 1px;
-  background-color: var(--design-blue);
-  margin: 20px 0;
-`;
-
 const ConfirmationBox = styled.div`
   margin-top: 20px;
   padding: 10px;
