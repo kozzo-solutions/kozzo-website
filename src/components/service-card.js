@@ -22,7 +22,6 @@ const Card = styled.div`
   &:hover .card-description {
     opacity: 1;
   }
-
 `;
 
 const ServiceCard = ({ icon, title, desc }) => (

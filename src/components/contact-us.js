@@ -38,8 +38,10 @@ const ContactSection = styled.div`
 const FieldDiv = styled.div`
   margin-bottom: 20px;
 
-  input, textarea {
-  box-sizing: border-box;}
+  input,
+  textarea {
+    box-sizing: border-box;
+  }
 `;
 
 const FormField = styled(Field)`
@@ -78,10 +80,12 @@ const ContactUs = () => {
   const { t } = useTranslation('common');
 
   const validationSchema = Yup.object({
-    name: Yup.string().required(t("contact-us.name-error")),
-    email: Yup.string().email(t("contact-us.email-error-invalid")).required(t("contact-us.email-error-required")),
-    subject: Yup.string().required(t("contact-us.object-error")),
-    message: Yup.string().required(t("contact-us.message-error")),
+    name: Yup.string().required(t('contact-us.name-error')),
+    email: Yup.string()
+      .email(t('contact-us.email-error-invalid'))
+      .required(t('contact-us.email-error-required')),
+    subject: Yup.string().required(t('contact-us.object-error')),
+    message: Yup.string().required(t('contact-us.message-error')),
   });
 
   const handleSubmit = (values, { resetForm }) => {
@@ -167,10 +171,11 @@ const ContactUs = () => {
             </Stack>
           </Box>
         </Stack> */}
-        <Stack 
+        <Stack
           sx={{
-            width:"100%", 
-          }}>
+            width: '100%',
+          }}
+        >
           <Formik
             initialValues={{ name: '', email: '', subject: '', message: '' }}
             validationSchema={validationSchema}
@@ -180,26 +185,17 @@ const ContactUs = () => {
               <Form>
                 <FieldDiv>
                   <CustomLabel htmlFor="name" required>
-                    {t("contact-us.name-label")}
+                    {t('contact-us.name-label')}
                   </CustomLabel>
-                  <FormField
-                    id="name"
-                    name="name"
-                    type="text"
-                    
-                  />
-                  <ErrorMessage  name="name" component="div" className="error" />
+                  <FormField id="name" name="name" type="text" />
+                  <ErrorMessage name="name" component="div" className="error" />
                 </FieldDiv>
 
                 <FieldDiv>
                   <CustomLabel htmlFor="email" required>
-                    {t("contact-us.email-label")}
+                    {t('contact-us.email-label')}
                   </CustomLabel>
-                  <FormField
-                    id="email"
-                    name="email"
-                    type="email"
-                  />
+                  <FormField id="email" name="email" type="email" />
                   <ErrorMessage
                     name="email"
                     component="div"
@@ -209,13 +205,13 @@ const ContactUs = () => {
 
                 <FieldDiv>
                   <CustomLabel htmlFor="subject" required>
-                    {t("contact-us.object-label")}
+                    {t('contact-us.object-label')}
                   </CustomLabel>
                   <FormField
                     id="subject"
                     name="subject"
                     type="text"
-                    placeholder={t("contact-us.object-placeholder")}
+                    placeholder={t('contact-us.object-placeholder')}
                   />
                   <ErrorMessage
                     name="subject"
@@ -226,13 +222,13 @@ const ContactUs = () => {
 
                 <FieldDiv>
                   <CustomLabel htmlFor="message" required>
-                    {t("contact-us.message-label")}
+                    {t('contact-us.message-label')}
                   </CustomLabel>
                   <FormField
                     id="message"
                     name="message"
                     as="textarea"
-                    placeholder={t("contact-us.message-placeholder")}
+                    placeholder={t('contact-us.message-placeholder')}
                   />
                   <ErrorMessage
                     name="message"
@@ -241,7 +237,9 @@ const ContactUs = () => {
                   />
                 </FieldDiv>
 
-                <Button style={{fontWeight: "400"}} type="submit">{t("contact-us.submit-button")}</Button>
+                <Button style={{ fontWeight: '400' }} type="submit">
+                  {t('contact-us.submit-button')}
+                </Button>
               </Form>
             )}
           </Formik>

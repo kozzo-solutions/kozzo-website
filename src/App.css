@@ -35,6 +35,7 @@ body, html {
     --design-blue: #004c54;
     --design-green: #6ebfa0;
     --design-green-light: #6ebfa028;
+    --design-gray: #e9e8e8;
 
     --font-family: 'Onest';
     --font-xlarge: 50px;
@@ -43,10 +44,21 @@ body, html {
     --font-medium: 22px;
     --font-small: 20px;
 
-    --max-width: 1500px;
+    --max-width: 1300px;
     --side-padding: 80px;
 
     --border-end-of-section: solid 3px var(--design-orange);
+}
+
+@media (max-width: 1200px){
+    :root {
+        --side-padding: 30px;
+        --font-xlarge: 40px;
+        --font-large: 25px;
+        --font-xmedium: 22px;
+        --font-medium: 18px;
+        --font-small: 16px;
+    }
 }
 
 * {

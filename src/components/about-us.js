@@ -23,14 +23,13 @@ const Separator = styled.div`
 `;
 
 const Members = styled.div`
-display: flex;
-gap: 50px;
-@media (max-width: 1300px) {
-  flex-direction: column;
-  align-items: center;
-}
+  display: flex;
+  gap: 50px;
+  @media (max-width: 1300px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
-
 
 const AboutUs = () => {
   const { t } = useTranslation('common');
@@ -51,7 +50,7 @@ const AboutUs = () => {
             fontWeight="600"
             color="var(--design-blue)"
           >
-            {t("about-us.about-us-title")}
+            {t('about-us.about-us-title')}
           </Typography>
           <Separator />
         </Stack>
@@ -64,7 +63,10 @@ const AboutUs = () => {
               fontFamily: 'var(--font-family)',
             }}
           >
-            {t('about-us.kozzo-description')}<br/><br/><strong>{t('about-us.together')}</strong>
+            {t('about-us.kozzo-description')}
+            <br />
+            <br />
+            <strong>{t('about-us.together')}</strong>
           </Typography>
 
           <Members>
