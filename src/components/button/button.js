@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const CustomButton = styled.button`
-    height: 60px;
+    height: 55px;
     border: 2px solid var(--design-blue);
     background-color: var(--design-blue);
     color: var(--design-gray);  
