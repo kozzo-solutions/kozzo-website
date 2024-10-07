@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
+import { CiLinkedin } from "react-icons/ci";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
@@ -11,7 +12,6 @@ import { useTranslation } from 'react-i18next';
 const ContactSection = styled.div`
   width: 100%;
   max-width: var(--max-width);
-  border: 1px solid var(--design-cream);
   display: flex;
   background-color: white;
   padding: 40px;
@@ -21,6 +21,7 @@ const ContactSection = styled.div`
   align-self: center;
   align-items: flex-start;
   margin-bottom: 100px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;  
 
   @media (max-width: 1250px) {
     flex-direction: column;
@@ -32,6 +33,17 @@ const ContactSection = styled.div`
     max-width: 80%;
     padding: 20px;
     gap: 20px;
+  }
+`;
+
+const ContactInfosContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @media (max-width: 1250px){
+    flex-direction:"row";
+    width: 100%;
+    justify-content: center;
   }
 `;
 
@@ -74,8 +86,18 @@ const Separator = styled.div`
   margin: 20px 0;
 `;
 
+const ConfirmationBox = styled.div`
+  margin-top: 20px;
+  padding: 10px;
+  background-color: var(--design-cream);
+  color: var(--design-blue);
+  border: 2px solid var(--design-blue);
+  border-radius: 10px;
+`;
+
 const ContactUs = () => {
   const { t } = useTranslation('common');
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const validationSchema = Yup.object({
     name: Yup.string().required(t("contact-us.name-error")),
@@ -94,12 +116,12 @@ const ContactUs = () => {
       )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
+        setIsSubmitted(true); 
+        resetForm(); 
       })
       .catch((error) => {
         console.error('FAILED...', error);
       });
-
-    resetForm(); // Resets the form fields after submission
   };
 
   return (
@@ -115,11 +137,13 @@ const ContactUs = () => {
         {t('contact-us.contact-us-title')}
       </Typography>
       <ContactSection>
-        {/* <Stack 
+        {<Stack 
           sx={{
             width:"min-content", 
             height:"100%", 
-            gap:"30px"
+            gap:"30px",
+            paddingBottom: "30px",
+            borderBottom:"2px solid var(--design-blue)"
           }}>
           <Typography
             variant="h3"
@@ -129,10 +153,12 @@ const ContactUs = () => {
           >
            {t("contact-us.contact-us-now")}
           </Typography>
-          <Stack
-            gap="10px"
-          >
-            <Stack direction="horizontal" alignItems="center" gap="20px">
+          <ContactInfosContainer>
+            <Stack 
+              direction="horizontal" 
+              alignItems="center" 
+              gap="20px"
+            >
               <PhoneIcon style={{ width: '30px', height: '30px' }} />
               <Typography
                 fontSize="var(--font-small)"
@@ -151,25 +177,11 @@ const ContactUs = () => {
                 <Link href="mailto:admin@kozzo.ca">admin@kozzo.ca</Link>
               </Typography>
             </Stack>
-          </Stack>
-
-          <Box>
-            <Typography
-              fontSize="var(--font-medium)"
-              color="var(--design-blue)"
-              fontWeight="bold"
-            >
-              {t("contact-us.stay-connected")}
-            </Typography>
-            <Stack direction="horizontal">
-              <LinkedInIcon style={{ width: '40px', height: '40px' }} />
-              <InstagramIcon style={{ width: '40px', height: '40px' }} />
-            </Stack>
-          </Box>
-        </Stack> */}
+          </ContactInfosContainer>
+        </Stack>}
         <Stack 
           sx={{
-            width:"100%", 
+            width:"100%",
           }}>
           <Formik
             initialValues={{ name: '', email: '', subject: '', message: '' }}
@@ -231,7 +243,7 @@ const ContactUs = () => {
                   <FormField
                     id="message"
                     name="message"
-                    as="textarea"
+                    component="textarea"
                     placeholder={t("contact-us.message-placeholder")}
                   />
                   <ErrorMessage
@@ -245,6 +257,11 @@ const ContactUs = () => {
               </Form>
             )}
           </Formik>
+          {isSubmitted && (
+            <ConfirmationBox>
+              {t("contact-us.confirmation-message")}
+            </ConfirmationBox>
+          )}
         </Stack>
       </ContactSection>
     </Stack>

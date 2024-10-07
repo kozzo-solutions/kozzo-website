@@ -48,8 +48,9 @@
         "name-error": "Name is required",
         "email-error-required": "Email is required",
         "email-error-invalid": "Invalid email",
-        "object-error": "Subject is required",
-        "message-error": "Message is required"
+        "object-error": "Object is required",
+        "message-error": "Message is required",
+        "confirmation-message": "Thank you for submitting your request to Kozzo ! Our team will respond to your inquiry as soon as possible."
     },
 
     "footer": {
