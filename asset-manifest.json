@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/kozzo-website/static/css/main.5dda0b14.css",
-    "main.js": "/kozzo-website/static/js/main.fc4bea9b.js",
-    "static/media/YuGothB.ttc": "/kozzo-website/static/media/YuGothB.fe5452d077eaa6c3d7d7.ttc",
-    "static/media/YuGothR.ttc": "/kozzo-website/static/media/YuGothR.1c556f84ee19e073cd60.ttc",
-    "static/media/YuGothM.ttc": "/kozzo-website/static/media/YuGothM.feae6c71ca52368f4d27.ttc",
-    "static/media/YuGothL.ttc": "/kozzo-website/static/media/YuGothL.50151164765009878fa3.ttc",
-    "static/media/jonathan.png": "/kozzo-website/static/media/jonathan.863c910bbb7ebe93747f.png",
-    "static/media/hero-image-space.png": "/kozzo-website/static/media/hero-image-space.10250dfb4679a8552316.png",
-    "static/media/etienne.png": "/kozzo-website/static/media/etienne.fb03dc37bacde38060da.png",
-    "static/media/kozzo-logo-descripteur.png": "/kozzo-website/static/media/kozzo-logo-descripteur.0d83dedf79f7378b36ea.png",
-    "static/media/kozzo-logo-nom-coul.png": "/kozzo-website/static/media/kozzo-logo-nom-coul.9f1bb65388cc36ba249b.png",
-    "index.html": "/kozzo-website/index.html",
-    "main.5dda0b14.css.map": "/kozzo-website/static/css/main.5dda0b14.css.map",
-    "main.fc4bea9b.js.map": "/kozzo-website/static/js/main.fc4bea9b.js.map"
+    "main.css": "/static/css/main.a71e21c8.css",
+    "main.js": "/static/js/main.f5e77029.js",
+    "static/media/YuGothB.ttc": "/static/media/YuGothB.fe5452d077eaa6c3d7d7.ttc",
+    "static/media/YuGothR.ttc": "/static/media/YuGothR.1c556f84ee19e073cd60.ttc",
+    "static/media/YuGothM.ttc": "/static/media/YuGothM.feae6c71ca52368f4d27.ttc",
+    "static/media/YuGothL.ttc": "/static/media/YuGothL.50151164765009878fa3.ttc",
+    "static/media/jonathan.png": "/static/media/jonathan.863c910bbb7ebe93747f.png",
+    "static/media/hero-image-space.png": "/static/media/hero-image-space.10250dfb4679a8552316.png",
+    "static/media/etienne.png": "/static/media/etienne.fb03dc37bacde38060da.png",
+    "static/media/kozzo-logo-descripteur.png": "/static/media/kozzo-logo-descripteur.0d83dedf79f7378b36ea.png",
+    "static/media/kozzo-logo-nom-coul.png": "/static/media/kozzo-logo-nom-coul.9f1bb65388cc36ba249b.png",
+    "index.html": "/index.html",
+    "main.a71e21c8.css.map": "/static/css/main.a71e21c8.css.map",
+    "main.f5e77029.js.map": "/static/js/main.f5e77029.js.map"
   },
   "entrypoints": [
-    "static/css/main.5dda0b14.css",
-    "static/js/main.fc4bea9b.js"
+    "static/css/main.a71e21c8.css",
+    "static/js/main.f5e77029.js"
   ]
 }
