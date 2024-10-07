@@ -72,90 +72,6 @@ body{
         --side-padding: 30px;
     }
 }
-.nav .hamburger-menu {
-    display: none;
-}
-/* End of Header CSS */
-
-/* End of TopSection CSS */
-
-/* Services and ServiceCard CSS*/
-
-
-
-/* End of Services and ServiceCard CSS */
-
-/* AboutUs CSS */
-.about-us-section {
-    font-family: var(--font-family);
-    padding: var(--sections-padding);
-    color: var(--design-blue);
-    display: flex;
-    border-bottom: var(--border-end-of-section);
-    margin-bottom: 50px;
-}
-
-.team-cards {
-    display: flex;
-
-}
-
-.member-card h3{
-    margin: 0px;
-}
-
-.member-card img {
-    width: clamp(200px, 30vw, 400px);
-    height: auto;
-    border-top-left-radius: 150px;
-    border-bottom-right-radius: 150px;
-}
-
-.member-image-background {
-    width: clamp(200px, 30vw, 400px);
-    height: auto - 5px;
-    border-top-left-radius: 150px;
-    border-bottom-right-radius: 150px;
-    background-color: var(--design-blue);
-}
-/* End of AboutUs CSS */
-
-/* ContactUs CSS */
-.contact-us-section {
-    padding: var(--sections-padding);
-}
-
-.contact-us-content {
-    display: flex;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.contact-us-content-left {
-    background-color: var(--design-yellow);
-    font-family: var(--font-family);
-    color: var(--design-blue);
-    padding: 20px;
-    width: 50%;
-}
-
-.contact-infos{
-    border-bottom: solid 1px var(--design-blue);
-}
-
-.contact-info{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.contact-us-content-right{
-    background-color: white;
-    padding: 20px;
-    width: 50%;
-    font-family: var(--font-family);
-    color: var(--design-blue);
-}
 
 input, textarea {
     width: 100%;
@@ -164,14 +80,6 @@ input, textarea {
     border-radius: 5px;
     margin-top: 5px;
     font-family: var(--font-family);
-}
-
-.client-personal-info{
-    display: flex;
-}
-
-.client-personal-info input{
-
 }
 
 textarea {
@@ -194,84 +102,8 @@ button {
     margin-top: 10px;
     font-size: 0.8em;
 }
-/* End of ContactUs CSS
 
-/* Footer CSS */
-.footer {
-    background-color: var(--design-orange);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 50px;
-}
-.icons {
-    color: var(--design-blue);
-    text-decoration: none;
-}
-.footer p {
-    margin: 0px;
-}
 
-/* End of Footer CSS */
-@media only screen and (max-width: 1600px) {
-
-     /* Header CSS */
-    .header .monitor-image {
-        display: none;
-    }
-    .header .mobile-image {
-        display: inline-flex;
-    }
-    /*End of header CSS */
-
-    /* TopSection CSS */
-
-    /*End of TopSection CSS */
-
-    /* Services and ServiceCard CSS */
-
-    /* End of Services and ServiceCard CSS */
-
-    /* AboutUs CSS */
-
-    /* End of AboutUs CSS */
-
-    /* Footer CSS */
-
-    /* End of Footer CSS */
-}
-
-@media only screen and (max-width: 1000px) {
-     /* Header CSS*/
-    .nav a {
-        display: none;
-    }
-    .nav .hamburger-menu {
-        display: flex;
-        font-size: 64px;
-        color: var(--design-cream);
-    }
-    /* End of header CSS */
-
-    /* TopSection CSS */
-
-    /* End of TopSection CSS */
-
-    /* Services and ServiceCard CSS*/
-
-    /* End of Services and ServiceCard CSS */
-
-    /* AboutUs CSS */
-
-    /* End of AboutUs CSS */
-    
-    /* Footer CSS */
-
-    /* End of Footer CSS */
-}
-
-/*Animations*/
 @keyframes fadeInUp {
   0% {
     opacity: 0;
