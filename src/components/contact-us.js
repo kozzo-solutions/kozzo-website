@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
-import { CiLinkedin } from "react-icons/ci";
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { CiLinkedin, CiInstagram } from "react-icons/ci";
+import { Formik, Form, Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
-import { Stack, Typography, Link } from '@mui/material';
+import { Stack, Typography, Link, Box } from '@mui/material';
 import { styled } from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import Button from './button/button';
 
 const ContactSection = styled.div`
   width: 100%;
@@ -25,7 +26,7 @@ const ContactSection = styled.div`
 
   @media (max-width: 1250px) {
     flex-direction: column;
-    max-width: 80%;
+    width: 80%;
     padding: 20px;
     gap: 20px;
   }
@@ -39,11 +40,17 @@ const ContactSection = styled.div`
 const ContactInfosContainer = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 10px;
+  border-bottom: 2px solid var(--design-blue);
+  padding-bottom: 25px;
+
   @media (max-width: 1250px){
-    flex-direction:"row";
-    width: 100%;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @media (max-width: 800px){
+    flex-direction: column;
   }
 `;
 
@@ -65,18 +72,11 @@ font-family: var(--font-family);
 font-weight: bold;
 `;
 
-const Button = styled.button`
-  padding: 12px !important;
-  font-size: var(--font-small) !important;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  border-radius: 20px;
-  color: var(--design-cream);
+const Separator = styled.div`
+  width: 100%;
+  height: 1px;
   background-color: var(--design-blue);
-  @media (max-width: 1250px) {
-    width: 100%;
-  }
+  margin: 20px 0;
 `;
 
 const ConfirmationBox = styled.div`
@@ -118,7 +118,7 @@ const ContactUs = () => {
   };
 
   return (
-    <Stack id="contact" marginTop="100px">
+    <Stack id="contact" marginTop="100px" maxWidth="800px" width="100%">
       <Typography
         textAlign="center"
         variant="h1"
@@ -132,11 +132,10 @@ const ContactUs = () => {
       <ContactSection>
         {<Stack 
           sx={{
-            width:"min-content", 
+            width:"60%", 
             height:"100%", 
             gap:"30px",
-            paddingBottom: "30px",
-            borderBottom:"2px solid var(--design-blue)"
+            paddingBottom: "30px"
           }}>
           <Typography
             variant="h3"
@@ -171,6 +170,15 @@ const ContactUs = () => {
               </Typography>
             </Stack>
           </ContactInfosContainer>
+          <Box>
+                <Typography fontSize="var(--font-medium)" color="var(--design-blue)" fontWeight="bold">
+                  Restons connectés
+                </Typography>
+                <Stack direction="horizontal">
+                  <CiLinkedin size="40px" style={{marginLeft: '-5px'}}/>
+                  <CiInstagram size="40px" style={{marginLeft: '-5px'}}/>
+                </Stack>
+          </Box>
         </Stack>}
         <Stack 
           sx={{
@@ -246,7 +254,16 @@ const ContactUs = () => {
                   />
                 </FieldDiv>
 
-                <Button style={{fontWeight: "400"}} type="submit">{t("contact-us.submit-button")}</Button>
+                <Button
+                  onClick={() =>
+                    document
+                    .getElementById('contact')
+                    ?.scrollIntoView({ behavior: 'smooth' })
+                  }
+                  width="260"
+                  text={t('contact-us.submit-button')}
+                  type="submit"
+                />
               </Form>
             )}
           </Formik>

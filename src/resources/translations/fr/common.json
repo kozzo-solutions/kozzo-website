@@ -1,4 +1,8 @@
 {
+    "app-title": {
+        "title": "Kozzo - Solutions numériques"
+    },
+    
     "header": {
         "language": "EN",
         "services": "Services",
@@ -44,7 +48,7 @@
         "message-label": "Message",
         "object-placeholder": "Travaillons ensemble !",
         "message-placeholder": "Qu'avez-vous en tête ?",
-        "submit-button": "Commencez votre aventure",
+        "submit-button": "Commencez votre aventure !",
         "name-error": "Nom est requis",
         "email-error-required": "Courriel est requis",
         "email-error-invalid":"Courriel invalide",
