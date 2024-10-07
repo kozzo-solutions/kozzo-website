@@ -4,7 +4,7 @@ import logoNom from '../resources/images/kozzo-logo-nom-coul.png';
 import { styled } from 'styled-components';
 import { Drawer, Link, Stack } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { RxHamburgerMenu } from "react-icons/rx";
+import { RxHamburgerMenu } from 'react-icons/rx';
 
 const Header = styled.header`
   width: 100%;
@@ -32,7 +32,7 @@ const LogoMobile = styled.img`
   height: 100%;
   display: none;
   @media (max-width: 1120px) {
-    display: inline; 
+    display: inline;
   }
 `;
 
@@ -88,7 +88,7 @@ const KozzoHeader = () => {
     }
 
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-  }
+  };
 
   return (
     <>
@@ -98,31 +98,34 @@ const KozzoHeader = () => {
 
         <Stack gap="60px" direction="horizontal">
           <Nav>
-            <NavLink onClick={() => toggleMenuAndScroll("services")}>{t('header.services')}</NavLink>
-            <NavLink onClick={() => toggleMenuAndScroll("about")}>{t('header.about')}</NavLink>
-            <NavLink onClick={() => toggleMenuAndScroll("contact")}>{t('header.contact')}</NavLink>
+            <NavLink onClick={() => toggleMenuAndScroll('services')}>
+              {t('header.services')}
+            </NavLink>
+            <NavLink onClick={() => toggleMenuAndScroll('about')}>
+              {t('header.about')}
+            </NavLink>
+            <NavLink onClick={() => toggleMenuAndScroll('contact')}>
+              {t('header.contact')}
+            </NavLink>
           </Nav>
           <LanguageButton onClick={toggleLanguage}>
             {t('header.language')}
           </LanguageButton>
-          <HamburgerMenu 
-            size="40px" 
-            onClick={toggleMenu}
-          />
+          <HamburgerMenu size="40px" onClick={toggleMenu} />
         </Stack>
       </Header>
 
-      <Drawer anchor="right"  open={menuOpen} onClose={() => setMenuOpen(false)}>
+      <Drawer anchor="right" open={menuOpen} onClose={() => setMenuOpen(false)}>
         <Stack padding={12} gap={2}>
-        <NavLink onClick={() => toggleMenuAndScroll("services")}>
-          {t('header.services')}
-        </NavLink>
-        <NavLink onClick={() => toggleMenuAndScroll("about")}>
-          {t('header.about')}
-        </NavLink>
-        <NavLink onClick={() => toggleMenuAndScroll("contact")}>
-          {t('header.contact')}
-        </NavLink>
+          <NavLink onClick={() => toggleMenuAndScroll('services')}>
+            {t('header.services')}
+          </NavLink>
+          <NavLink onClick={() => toggleMenuAndScroll('about')}>
+            {t('header.about')}
+          </NavLink>
+          <NavLink onClick={() => toggleMenuAndScroll('contact')}>
+            {t('header.contact')}
+          </NavLink>
         </Stack>
       </Drawer>
     </>

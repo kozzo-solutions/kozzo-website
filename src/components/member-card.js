@@ -8,11 +8,11 @@ const Card = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 30px;
-  
+
   @media (max-width: 1150px) {
     flex-direction: column-reverse;
   }
-    
+
   @media (max-width: 750px) {
     width: 70%;
   }

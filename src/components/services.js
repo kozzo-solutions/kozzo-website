@@ -4,9 +4,9 @@ import { useTranslation } from 'react-i18next';
 import { Stack, Typography } from '@mui/material';
 import styled from 'styled-components';
 import { PiDevicesThin } from 'react-icons/pi';
-import { PiLayoutThin } from "react-icons/pi";
-import { PiGraphLight } from "react-icons/pi";
-import { CiSettings } from "react-icons/ci";
+import { PiLayoutThin } from 'react-icons/pi';
+import { PiGraphLight } from 'react-icons/pi';
+import { CiSettings } from 'react-icons/ci';
 
 const SectionContainer = styled(Stack)`
   display: flex;

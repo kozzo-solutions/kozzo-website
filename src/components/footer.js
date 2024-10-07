@@ -12,7 +12,7 @@ const FooterComponent = styled.div`
 `;
 
 const Footer = () => {
-  const {t} = useTranslation('common');
+  const { t } = useTranslation('common');
 
   return (
     <FooterComponent>
@@ -39,7 +39,7 @@ const Footer = () => {
           color="var(--design-blue)"
           fontWeight="bold"
         >
-          {t("footer.rights-reserved")}
+          {t('footer.rights-reserved')}
         </Typography>
       </Stack>
     </FooterComponent>
