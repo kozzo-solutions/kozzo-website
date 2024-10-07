@@ -8,6 +8,7 @@ const Card = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 30px;
+  
   @media (max-width: 1150px) {
     flex-direction: column-reverse;
   }
@@ -20,9 +21,9 @@ const Card = styled.div`
 const CardImage = styled.img`
   width: 60%;
   height: auto;
+
   @media (max-width: 1150px) {
-    min-width: 300px;
-    width: 80%;
+    width: 100%;
   }
 `;
 
