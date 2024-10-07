@@ -67,7 +67,7 @@ const TopSection = () => {
     <SectionContainer direction="horizontal">
       <Stack
         maxWidth="var(--max-width)"
-        height="100%"
+        height="auto"
         direction="horizontal"
         gap={12}
         alignItems="center"
