@@ -23,6 +23,11 @@ const SectionContainer = styled(Stack)`
       gap: 0;
     }
   }
+
+    @media (max-width: 600px) {
+    height: 100%;
+    padding: 80px 20px;
+}
 `;
 
 const HeroImage = styled.img`
