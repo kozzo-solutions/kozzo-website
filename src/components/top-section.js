@@ -21,8 +21,11 @@ const SectionContainer = styled(Stack)`
   @media (max-width: 750px) {
     > div {
       gap: 0;
-    }
+    };
   }
+  @media (max-width: 1000px) {
+    height: 100%;
+  }  
 `;
 
 const HeroImage = styled.img`
