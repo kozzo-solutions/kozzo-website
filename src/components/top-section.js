@@ -21,7 +21,7 @@ const SectionContainer = styled(Stack)`
   @media (max-width: 750px) {
     > div {
       gap: 0;
-    }
+    };
   }
 
     @media (max-width: 600px) {
@@ -72,7 +72,7 @@ const TopSection = () => {
     <SectionContainer direction="horizontal">
       <Stack
         maxWidth="var(--max-width)"
-        height="100%"
+        height="auto"
         direction="horizontal"
         gap={12}
         alignItems="center"

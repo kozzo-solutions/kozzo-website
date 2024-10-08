@@ -155,6 +155,7 @@ const ContactUs = () => {
               <Typography
                 fontSize="var(--font-small)"
                 color="var(--design-blue)"
+                whiteSpace="nowrap"
               >
                 +1 (418) 930-4988
               </Typography>
@@ -172,7 +173,7 @@ const ContactUs = () => {
           </ContactInfosContainer>
           <Box>
                 <Typography fontSize="var(--font-medium)" color="var(--design-blue)" fontWeight="bold">
-                  Restons connectés
+                  {t("contact-us.stay-connected")}
                 </Typography>
                 <Stack direction="horizontal">
                   <CiLinkedin size="40px" style={{marginLeft: '-5px'}}/>
