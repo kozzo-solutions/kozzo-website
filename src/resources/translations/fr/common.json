@@ -54,7 +54,7 @@
         "email-error-invalid":"Courriel invalide",
         "object-error": "Sujet est requis",
         "message-error": "Message est requis",
-        "confirmation-message": "Merci d'avoir soumis votre demande à Kozzo ! Notre équipe répondrons à votre requête dans les plus bref délais."
+        "confirmation-message": "Merci d'avoir soumis votre demande à Kozzo ! Notre équipe répondra à votre requête dans les plus bref délais."
     },
 
     "footer": {
