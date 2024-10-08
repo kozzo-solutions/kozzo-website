@@ -21,13 +21,13 @@ const SectionContainer = styled(Stack)`
   @media (max-width: 750px) {
     > div {
       gap: 0;
-    };
+    }
   }
 
-    @media (max-width: 600px) {
+  @media (max-width: 600px) {
     height: 100%;
     padding: 80px 20px;
-}
+  }
 `;
 
 const HeroImage = styled.img`

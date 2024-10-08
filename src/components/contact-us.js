@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
-import { CiLinkedin, CiInstagram } from "react-icons/ci";
-import { Formik, Form, Field, ErrorMessage} from 'formik';
+import { CiLinkedin, CiInstagram } from 'react-icons/ci';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 import { Stack, Typography, Link, Box } from '@mui/material';
@@ -22,7 +22,7 @@ const ContactSection = styled.div`
   align-self: center;
   align-items: flex-start;
   margin-bottom: 100px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;  
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
   @media (max-width: 1250px) {
     flex-direction: column;
@@ -45,11 +45,11 @@ const ContactInfosContainer = styled.div`
   border-bottom: 2px solid var(--design-blue);
   padding-bottom: 25px;
 
-  @media (max-width: 1250px){
+  @media (max-width: 1250px) {
     flex-direction: row;
     justify-content: space-between;
   }
-  @media (max-width: 800px){
+  @media (max-width: 800px) {
     flex-direction: column;
   }
 `;
@@ -57,8 +57,10 @@ const ContactInfosContainer = styled.div`
 const FieldDiv = styled.div`
   margin-bottom: 20px;
 
-  input, textarea {
-  box-sizing: border-box;}
+  input,
+  textarea {
+    box-sizing: border-box;
+  }
 `;
 
 const FormField = styled(Field)`
@@ -93,10 +95,12 @@ const ContactUs = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const validationSchema = Yup.object({
-    name: Yup.string().required(t("contact-us.name-error")),
-    email: Yup.string().email(t("contact-us.email-error-invalid")).required(t("contact-us.email-error-required")),
-    subject: Yup.string().required(t("contact-us.object-error")),
-    message: Yup.string().required(t("contact-us.message-error")),
+    name: Yup.string().required(t('contact-us.name-error')),
+    email: Yup.string()
+      .email(t('contact-us.email-error-invalid'))
+      .required(t('contact-us.email-error-required')),
+    subject: Yup.string().required(t('contact-us.object-error')),
+    message: Yup.string().required(t('contact-us.message-error')),
   });
 
   const handleSubmit = (values, { resetForm }) => {
@@ -109,8 +113,8 @@ const ContactUs = () => {
       )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
-        setIsSubmitted(true); 
-        resetForm(); 
+        setIsSubmitted(true);
+        resetForm();
       })
       .catch((error) => {
         console.error('FAILED...', error);
@@ -130,61 +134,65 @@ const ContactUs = () => {
         {t('contact-us.contact-us-title')}
       </Typography>
       <ContactSection>
-        {<Stack 
-          sx={{
-            width:"60%", 
-            height:"100%", 
-            gap:"30px",
-            paddingBottom: "30px"
-          }}>
-          <Typography
-            variant="h3"
-            fontSize="var(--font-xmedium)"
-            color="var(--design-blue)"
-            fontWeight="600"
+        {
+          <Stack
+            sx={{
+              width: '60%',
+              height: '100%',
+              gap: '30px',
+              paddingBottom: '30px',
+            }}
           >
-           {t("contact-us.contact-us-now")}
-          </Typography>
-          <ContactInfosContainer>
-            <Stack 
-              direction="horizontal" 
-              alignItems="center" 
-              gap="20px"
+            <Typography
+              variant="h3"
+              fontSize="var(--font-xmedium)"
+              color="var(--design-blue)"
+              fontWeight="600"
             >
-              <PhoneIcon style={{ width: '30px', height: '30px' }} />
-              <Typography
-                fontSize="var(--font-small)"
-                color="var(--design-blue)"
-                whiteSpace="nowrap"
-              >
-                +1 (418) 930-4988
-              </Typography>
-            </Stack>
-
-            <Stack direction="horizontal" alignItems="center" gap="20px">
-              <EmailIcon style={{ width: '30px', height: '30px' }} />
-              <Typography
-                fontSize="var(--font-small)"
-                color="var(--design-blue)"
-              >
-                <Link href="mailto:admin@kozzo.ca">admin@kozzo.ca</Link>
-              </Typography>
-            </Stack>
-          </ContactInfosContainer>
-          <Box>
-                <Typography fontSize="var(--font-medium)" color="var(--design-blue)" fontWeight="bold">
-                  {t("contact-us.stay-connected")}
+              {t('contact-us.contact-us-now')}
+            </Typography>
+            <ContactInfosContainer>
+              <Stack direction="horizontal" alignItems="center" gap="20px">
+                <PhoneIcon style={{ width: '30px', height: '30px' }} />
+                <Typography
+                  fontSize="var(--font-small)"
+                  color="var(--design-blue)"
+                  whiteSpace="nowrap"
+                >
+                  +1 (418) 930-4988
                 </Typography>
-                <Stack direction="horizontal">
-                  <CiLinkedin size="40px" style={{marginLeft: '-5px'}}/>
-                  <CiInstagram size="40px" style={{marginLeft: '-5px'}}/>
-                </Stack>
-          </Box>
-        </Stack>}
-        <Stack 
+              </Stack>
+
+              <Stack direction="horizontal" alignItems="center" gap="20px">
+                <EmailIcon style={{ width: '30px', height: '30px' }} />
+                <Typography
+                  fontSize="var(--font-small)"
+                  color="var(--design-blue)"
+                >
+                  <Link href="mailto:admin@kozzo.ca">admin@kozzo.ca</Link>
+                </Typography>
+              </Stack>
+            </ContactInfosContainer>
+            <Box>
+              <Typography
+                fontSize="var(--font-medium)"
+                color="var(--design-blue)"
+                fontWeight="bold"
+              >
+                {t('contact-us.stay-connected')}
+              </Typography>
+              <Stack direction="horizontal">
+                <CiLinkedin size="40px" style={{ marginLeft: '-5px' }} />
+                <CiInstagram size="40px" style={{ marginLeft: '-5px' }} />
+              </Stack>
+            </Box>
+          </Stack>
+        }
+        <Stack
           sx={{
-            width:"100%",
-          }}>
+            width: '100%',
+          }}
+        >
           <Formik
             initialValues={{ name: '', email: '', subject: '', message: '' }}
             validationSchema={validationSchema}
@@ -194,26 +202,17 @@ const ContactUs = () => {
               <Form>
                 <FieldDiv>
                   <CustomLabel htmlFor="name" required>
-                    {t("contact-us.name-label")}
+                    {t('contact-us.name-label')}
                   </CustomLabel>
-                  <FormField
-                    id="name"
-                    name="name"
-                    type="text"
-                    
-                  />
-                  <ErrorMessage  name="name" component="div" className="error" />
+                  <FormField id="name" name="name" type="text" />
+                  <ErrorMessage name="name" component="div" className="error" />
                 </FieldDiv>
 
                 <FieldDiv>
                   <CustomLabel htmlFor="email" required>
-                    {t("contact-us.email-label")}
+                    {t('contact-us.email-label')}
                   </CustomLabel>
-                  <FormField
-                    id="email"
-                    name="email"
-                    type="email"
-                  />
+                  <FormField id="email" name="email" type="email" />
                   <ErrorMessage
                     name="email"
                     component="div"
@@ -223,13 +222,13 @@ const ContactUs = () => {
 
                 <FieldDiv>
                   <CustomLabel htmlFor="subject" required>
-                    {t("contact-us.object-label")}
+                    {t('contact-us.object-label')}
                   </CustomLabel>
                   <FormField
                     id="subject"
                     name="subject"
                     type="text"
-                    placeholder={t("contact-us.object-placeholder")}
+                    placeholder={t('contact-us.object-placeholder')}
                   />
                   <ErrorMessage
                     name="subject"
@@ -240,13 +239,13 @@ const ContactUs = () => {
 
                 <FieldDiv>
                   <CustomLabel htmlFor="message" required>
-                    {t("contact-us.message-label")}
+                    {t('contact-us.message-label')}
                   </CustomLabel>
                   <FormField
                     id="message"
                     name="message"
                     component="textarea"
-                    placeholder={t("contact-us.message-placeholder")}
+                    placeholder={t('contact-us.message-placeholder')}
                   />
                   <ErrorMessage
                     name="message"
@@ -258,8 +257,8 @@ const ContactUs = () => {
                 <Button
                   onClick={() =>
                     document
-                    .getElementById('contact')
-                    ?.scrollIntoView({ behavior: 'smooth' })
+                      .getElementById('contact')
+                      ?.scrollIntoView({ behavior: 'smooth' })
                   }
                   width="260"
                   text={t('contact-us.submit-button')}
@@ -270,7 +269,7 @@ const ContactUs = () => {
           </Formik>
           {isSubmitted && (
             <ConfirmationBox>
-              {t("contact-us.confirmation-message")}
+              {t('contact-us.confirmation-message')}
             </ConfirmationBox>
           )}
         </Stack>

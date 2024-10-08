@@ -135,7 +135,7 @@ const KozzoHeader = () => {
             {t('header.contact')}
           </NavLink>
           <LanguageButton onClick={toggleLanguage}>
-              {t('header.language')}
+            {t('header.language')}
           </LanguageButton>
         </Stack>
       </Drawer>
