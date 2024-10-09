@@ -26,6 +26,11 @@ const Header = styled.header`
 const LogoMonitor = styled.img`
   width: auto;
   height: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
+
   @media (max-width: 1120px) {
     display: none;
   }
@@ -34,6 +39,11 @@ const LogoMonitor = styled.img`
 const LogoMobile = styled.img`
   width: auto;
   height: 100%;
+
+  &:hover {
+    cursor: pointer;
+  } 
+
   display: none;
   @media (max-width: 1120px) {
     display: inline;

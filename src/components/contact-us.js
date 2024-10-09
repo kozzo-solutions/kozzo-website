@@ -182,8 +182,12 @@ const ContactUs = () => {
                 {t('contact-us.stay-connected')}
               </Typography>
               <Stack direction="horizontal">
-                <CiLinkedin size="40px" style={{ marginLeft: '-5px' }} />
-                <CiInstagram size="40px" style={{ marginLeft: '-5px' }} />
+                <a href="https://www.linkedin.com/company/kozzo" target="_blank" rel="noopener noreferrer">
+                  <CiLinkedin size="40px" style={{ marginLeft: '-5px', cursor: 'pointer', color:'var(--design-blue)' }} />
+                </a>
+                <a href="https://www.instagram.com/kozzo_solutions" target="_blank" rel="noopener noreferrer">
+                  <CiInstagram size="40px" style={{ marginLeft: '-5px', cursor: 'pointer', color:'var(--design-blue)' }} />
+                </a>
               </Stack>
             </Box>
           </Stack>
