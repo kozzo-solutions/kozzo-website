@@ -28,6 +28,10 @@ const SectionContainer = styled(Stack)`
     height: 100%;
     padding: 80px 20px;
   }
+
+  @media (max-height: 900px) {
+    height: 100vh;
+  }
 `;
 
 const HeroImage = styled.img`
@@ -47,6 +51,10 @@ const HeroImage = styled.img`
   }
 
   @media (max-width: 600px) {
+    display: none;
+  }
+
+  @media (max-height: 900px) {
     display: none;
   }
 `;
