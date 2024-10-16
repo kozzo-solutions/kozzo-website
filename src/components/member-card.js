@@ -8,7 +8,6 @@ const Card = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 30px;
-  gap: 0;
 
   @media (max-width: 1150px) {
     flex-direction: column-reverse;
@@ -16,15 +15,14 @@ const Card = styled.div`
 
   @media (max-width: 750px) {
     width: 70%;
+    padding: 0 0px;
   }
 `;
 
 const CardImage = styled.img`
   width: 60%;
   height: auto;
-  object-fit: contain;
-  margin: 0;
-  padding: 0;
+  object-fit: cover;
 
   @media (max-width: 1150px) {
     width: 100%;
@@ -36,6 +34,7 @@ const MemberCard = ({ name, role, picture }) => (
     <CardImage src={picture} alt={`${name}`} />
     <Stack
       marginTop={3}
+      paddingRight={2}
       alignItems="flex-end"
       height="min-content"
     >
