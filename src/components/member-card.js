@@ -16,6 +16,10 @@ const Card = styled.div`
   @media (max-width: 750px) {
     width: 70%;
   }
+
+  @media (max-width: 500px) {
+    width: 90%;
+  }
 `;
 
 const CardImage = styled.img`
