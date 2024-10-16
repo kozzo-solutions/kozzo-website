@@ -24,7 +24,7 @@ const CardImage = styled.img`
   object-fit: cover;
 
   @media (max-width: 1150px) {
-    width: 100%;
+    width: 80%;
   }
 `;
 
