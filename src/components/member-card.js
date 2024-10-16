@@ -21,7 +21,7 @@ const Card = styled.div`
 const CardImage = styled.img`
   width: 60%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
 
   @media (max-width: 1150px) {
     width: 100%;
