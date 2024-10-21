@@ -13,48 +13,49 @@
 
     "top-section": {
         "main-sentence": "Propel your business into the world of tomorrow",
-        "detailed-sentence": "Personalized digital solutions that meet your specific needs and streamline your digital integration.",
-        "button-text": "Let's talk about your project"
+        "detailed-sentence": "Personalized digital solutions that meet your specific needs and optimize your digital integration.",
+        "button-text": "Let's talk about your project!"
     },
 
     "services": {
         "title": "Our services",
         "web-design-code-title": "Web Development with Code",
-        "web-design-code-desc": "Revolutionize your digital image with our customized web solutions. Kozzo's team possesses the development expertise needed to help your organization stand out from the competition.",
+        "web-design-code-desc": "Revolutionize your digital image with our tailored web solutions. Kozzo's team possesses the development expertise to help your organization stand out from the competition.",
         "web-design-no-code-title": "No-Code Web Design",
-        "web-design-no-code-desc": "Simplify the creation of your website with our no-code design service. Save time and stand out with ready-made and customized templates.",
+        "web-design-no-code-desc": "Simplify the creation of your website with our no-code design service. Save time and customize your web presence with design templates adapted to your preferences.",
         "software-solutions-title": "Creation of Software Solutions",
-        "software-solutions-desc": "Optimize your systems' performance with our software solutions tailored to your needs. Whether it's for measuring performance, automating processes, or streamlining internal operations, we are here for you.",
+        "software-solutions-desc": "Optimize your systems with our tailored software solutions. Whether it's to automate processes, streamline your internal operations, or measure the performance of your systems, we are here for you.",
         "service-maintenance-title": "Service Maintenance",
-        "service-maintenance-desc": "Ensure the continuity of your operations with our comprehensive maintenance service. By building trusting relationships with our clients, we ensure your systems stay up-to-date while minimizing downtime and maximizing reliability."
+        "service-maintenance-desc": "Ensure the continuity of your operations with our comprehensive maintenance service. We ensure your systems stay up-to-date while minimizing downtime and maximizing reliability."
     },
 
     "about-us": {
         "about-us-title": "About us",
-        "kozzo-description": "We know that every digital project requires a tailored approach. Through close collaboration with our clients, we create customized solutions that enhance your visibility and ensure seamless integration, while adding value to your business. Join Kozzo to benefit from our technical expertise and turn your ideas into reality.",
-        "together":"Together, let’s propel your business into the world of tomorrow.",
+        "kozzo-history": "Founded in 2024 by Étienne Arsenault, a computer science graduate, and Jonathan Bessette, a software engineer, Kozzo is a young company motivated to help its clients succeed in the ever-growing digital world.",
+        "kozzo-description": "We know that every digital project requires a tailored approach and close collaboration with our clients. This way, we create customized solutions that enhance your visibility and ensure smooth integration, bringing added value to your business. Join Kozzo to benefit from our professional expertise and turn your ideas into reality.",
+        "together":"Together, let’s propel your business into the world of tomorrow!",
         "co-founder-title": "Co-founder"
     },
 
     "contact-us": {
-        "contact-us-title": "Let's talk about your project !",
-        "need-help": "Need help with your IT project ?",
-        "contact-us-now": "Contact us now !",
+        "contact-us-title": "Let's talk about your project!",
+        "need-help": "Need help with your IT project?",
+        "contact-us-now": "Contact us now!",
         "stay-connected": "Stay connected",
-        "how-can-we-help": "How can we help you ?",
+        "how-can-we-help": "How can we help you?",
         "name-label": "Name",
         "email-label": "Email",
         "object-label": "Object",
         "message-label": "Message",
-        "object-placeholder": "Let's work together !",
-        "message-placeholder": "What do you have in mind ?",
-        "submit-button": "Begin your journey !",
+        "object-placeholder": "Let's work together!",
+        "message-placeholder": "What do you have in mind?",
+        "submit-button": "Begin your journey!",
         "name-error": "Name is required",
         "email-error-required": "Email is required",
         "email-error-invalid": "Invalid email",
         "object-error": "Object is required",
         "message-error": "Message is required",
-        "confirmation-message": "Thank you for submitting your request to Kozzo ! Our team will respond to your inquiry as soon as possible."
+        "confirmation-message": "Thank you for submitting your request to Kozzo! Our team will respond to your inquiry as soon as possible."
     },
 
     "footer": {

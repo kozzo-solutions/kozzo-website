@@ -78,6 +78,7 @@ const LanguageButton = styled.button`
 
 const HamburgerMenu = styled(RxHamburgerMenu)`
   display: none;
+  color: var(--design-blue) !important;
   @media (max-width: 1000px) {
     display: block;
   }

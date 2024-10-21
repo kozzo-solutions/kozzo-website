@@ -17,22 +17,6 @@ const Footer = () => {
   return (
     <FooterComponent>
       <Stack alignItems="center">
-        <Stack direction="row" gap="20px">
-          {/* <LinkedInIcon
-            style={{
-              width: '40px',
-              height: '40px',
-              color: 'var(--design-blue)',
-            }}
-          ></LinkedInIcon>
-          <InstagramIcon
-            style={{
-              width: '40px',
-              height: '40px',
-              color: 'var(--design-blue)',
-            }}
-          ></InstagramIcon> */}
-        </Stack>
         <Typography
           padding="10px"
           fontSize="var(--font-small)"

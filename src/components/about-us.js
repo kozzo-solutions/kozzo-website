@@ -29,6 +29,17 @@ const Members = styled.div`
     flex-direction: column;
     align-items: center;
   }
+
+  @media (max-width: 900px) {
+    flex-direction: row;
+    width: 80%
+  }
+  
+  @media (max-width: 700px) {
+    flex-direction: column;
+    width: 60%;
+    min-width: 300px;
+  }
 `;
 
 const AboutUs = () => {
@@ -63,6 +74,9 @@ const AboutUs = () => {
               fontFamily: 'var(--font-family)',
             }}
           >
+            {t('about-us.kozzo-history')}
+            <br />
+            <br />
             {t('about-us.kozzo-description')}
             <br />
             <br />

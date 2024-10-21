@@ -9,7 +9,7 @@ const Card = styled.div`
   justify-content: space-between;
   padding: 0 30px;
 
-  @media (max-width: 1150px) {
+  @media (max-width: 900px) {
     flex-direction: column-reverse;
   }
 
@@ -24,7 +24,7 @@ const CardImage = styled.img`
   height: auto;
   object-fit: cover;
 
-  @media (max-width: 1150px) {
+  @media (max-width: 900px) {
     width: 100%;
   }
 `;

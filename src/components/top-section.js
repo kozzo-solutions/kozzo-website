@@ -9,6 +9,7 @@ const SectionContainer = styled(Stack)`
   background-color: var(--design-orange);
   display: flex;
   padding: 80px var(--side-padding);
+  padding-top: 20px;
   color: var(--design-cream);
   align-items: center;
   width: 100%;
@@ -18,19 +19,36 @@ const SectionContainer = styled(Stack)`
   position: relative;
   max-height: 800px;
 
-  @media (max-width: 750px) {
+  @media (max-height: 900px) {
+    height: 100vh;
+  }
+
+  @media (max-width: 800px) {
     > div {
-      gap: 0;
+      gap: 0px;
     }
+    text-align: center;
   }
 
   @media (max-width: 600px) {
     height: 100%;
     padding: 80px 20px;
   }
+`;
 
-  @media (max-height: 900px) {
-    height: 100vh;
+const LeftStack = styled(Stack)`
+  width: 60%;
+  gap: 16px;
+  padding-top: 64px;
+
+  @media (max-width: 1200px) {
+    width: 90%;
+  }
+
+  @media (max-width: 800px) {
+    align-items: center;
+    text-align: center;
+    width: 100%;
   }
 `;
 
@@ -50,26 +68,12 @@ const HeroImage = styled.img`
     width: 200px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     display: none;
   }
 
-  @media (max-height: 900px) {
+  @media (max-height: 700px) {
     display: none;
-  }
-`;
-
-const LeftStack = styled(Stack)`
-  width: 60%;
-  gap: 16px;
-  padding-top: 64px;
-
-  @media (max-width: 1200px) {
-    width: 90%;
-  }
-
-  @media (max-width: 750px) {
-    width: 100%;
   }
 `;
 
@@ -82,7 +86,7 @@ const TopSection = () => {
         maxWidth="var(--max-width)"
         height="auto"
         direction="horizontal"
-        gap={12}
+        gap="96px"
         alignItems="center"
       >
         <LeftStack>
@@ -108,6 +112,7 @@ const TopSection = () => {
             }
             width="260"
             text={t('top-section.button-text')}
+            style={{ width: '100%', maxWidth: '260px' }} // Ensuring button remains centered
           />
         </LeftStack>
         <Stack>
