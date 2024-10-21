@@ -20,7 +20,7 @@
     "services": {
         "title": "Nos services",
         "web-design-code-title": "Développement Web avec code",
-        "web-design-code-desc": "Révolutionnez votre image numérique à l'aide de nos solutions web sur-mesures. L'équipe de Kozzo possède l'expertise en développement permettant à votre organisation de se démarquer face à la concurrence.",
+        "web-design-code-desc": "Révolutionnez votre image numérique à l'aide de nos solutions web sur-mesure. L'équipe de Kozzo possède l'expertise en développement permettant à votre organisation de se démarquer face à la concurrence.",
         "web-design-no-code-title": "Conception Web sans code",
         "web-design-no-code-desc": "Simplifiez la création de votre site avec notre service de conception sans code. Gagnez du temps et personnalisez votre image web avec des modèles de conception répondant à vos préférences.",
         "software-solutions-title": "Création de solutions logicielles",
@@ -31,8 +31,8 @@
 
     "about-us": {
         "about-us-title": "À propos",
-        "kozzo-history": "Fondé en 2024 par Étienne Arsenault, bachelier en informatique, et Jonathan Bessette, ingénieur logiciel, Kozzo est une jeune entreprise motivée à aider ses clients à se démarquer dans le monde en pleine expansion du numérique.",
-        "kozzo-description": "Nous savons que chaque projet numérique nécessite une approche sur-mesure ainsi qu'une étroite collaboration avec nos clients. Nous créons de cette façon des solutions adaptées qui améliorent votre visibilité et garantissent une intégration fluide, apportant ainsi une valeur ajoutée à votre activité. Rejoignez Kozzo pour bénéficier de notre savoir-faire professionnel et transformer vos idées en réalité.",
+        "kozzo-history": "Fondée en 2024 par Étienne Arsenault, bachelier en informatique, et Jonathan Bessette, ingénieur logiciel, Kozzo est une jeune entreprise motivée à aider ses clients à se démarquer dans le monde en pleine expansion du numérique.",
+        "kozzo-description": "Nous savons que chaque projet numérique nécessite une approche sur-mesure ainsi qu'une étroite collaboration avec nos clients. Nous créons de cette façon des solutions adaptées qui améliorent votre visibilité et garantissent une intégration fluide, apportant ainsi une valeur ajoutée à votre entreprise. Rejoignez Kozzo pour bénéficier de notre savoir-faire professionnel et transformer vos idées en réalité.",
         "together":"Ensemble, propulsons votre entreprise vers le monde de demain!",
         "co-founder-title": "Co-fondateur"
     },

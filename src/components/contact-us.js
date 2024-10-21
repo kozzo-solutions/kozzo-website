@@ -90,6 +90,13 @@ const ConfirmationBox = styled.div`
   border-radius: 10px;
 `;
 
+const ButtonDiv = styled.div`
+  display: flex;
+  @media (max-width: 800px) {
+    justify-content: center;
+  }
+`;
+
 const ContactUs = () => {
   const { t } = useTranslation('common');
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -257,17 +264,18 @@ const ContactUs = () => {
                     className="error"
                   />
                 </FieldDiv>
-
-                <Button
-                  onClick={() =>
-                    document
-                      .getElementById('contact')
-                      ?.scrollIntoView({ behavior: 'smooth' })
-                  }
-                  width="260"
-                  text={t('contact-us.submit-button')}
-                  type="submit"
-                />
+                <ButtonDiv>
+                  <Button
+                    onClick={() =>
+                      document
+                        .getElementById('contact')
+                        ?.scrollIntoView({ behavior: 'smooth' })
+                    }
+                    width="260"
+                    text={t('contact-us.submit-button')}
+                    type="submit"
+                  />
+                </ButtonDiv>
               </Form>
             )}
           </Formik>
