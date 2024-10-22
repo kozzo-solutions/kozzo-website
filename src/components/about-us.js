@@ -86,12 +86,12 @@ const AboutUs = () => {
           <Members>
             <MemberCard
               name="Étienne Arsenault"
-              role={t('about-us.co-founder-title')}
+              role={t('about-us.co-owner-title')}
               picture={etiennePicture}
             />
             <MemberCard
               name="Jonathan Bessette"
-              role={t('about-us.co-founder-title')}
+              role={t('about-us.co-owner-title')}
               picture={jonathanPicture}
             />
           </Members>
