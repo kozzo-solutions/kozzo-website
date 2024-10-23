@@ -14,7 +14,7 @@
     "top-section": {
         "main-sentence": "Propel your business into the world of tomorrow",
         "detailed-sentence": "Personalized digital solutions that meet your specific needs and optimize your digital integration.",
-        "button-text": "Let's talk about your project!"
+        "button-text": "Let's talk about your project !"
     },
 
     "services": {
@@ -33,29 +33,29 @@
         "about-us-title": "About us",
         "kozzo-history": "Founded in 2024 by Étienne Arsenault, a computer science graduate, and Jonathan Bessette, a software engineer, Kozzo is a young company motivated to help its clients succeed in the ever-growing digital world.",
         "kozzo-description": "We know that every digital project requires a tailored approach and close collaboration with our clients. This way, we create customized solutions that enhance your visibility and ensure smooth integration, bringing added value to your business. Join Kozzo to benefit from our professional expertise and turn your ideas into reality.",
-        "together":"Together, let’s propel your business into the world of tomorrow!",
+        "together":"Together, let’s propel your business into the world of tomorrow !",
         "co-owner-title": "Co-owner"
     },
 
     "contact-us": {
-        "contact-us-title": "Let's talk about your project!",
+        "contact-us-title": "Let's talk about your project !",
         "need-help": "Need help with your IT project?",
-        "contact-us-now": "Contact us now!",
+        "contact-us-now": "Contact us now !",
         "stay-connected": "Stay connected",
         "how-can-we-help": "How can we help you?",
         "name-label": "Name",
         "email-label": "Email",
         "object-label": "Object",
         "message-label": "Message",
-        "object-placeholder": "Let's work together!",
+        "object-placeholder": "Let's work together !",
         "message-placeholder": "What do you have in mind?",
-        "submit-button": "Begin your journey!",
+        "submit-button": "Begin your journey !",
         "name-error": "Name is required",
         "email-error-required": "Email is required",
         "email-error-invalid": "Invalid email",
         "object-error": "Object is required",
         "message-error": "Message is required",
-        "confirmation-message": "Thank you for submitting your request to Kozzo! Our team will respond to your inquiry as soon as possible."
+        "confirmation-message": "Thank you for submitting your request to Kozzo ! Our team will respond to your inquiry as soon as possible."
     },
 
     "footer": {
