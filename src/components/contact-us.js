@@ -42,12 +42,13 @@ const ContactInfosContainer = styled.div`
   flex-direction: column;
   width: 100%;
   gap: 10px;
-  border-bottom: 2px solid var(--design-blue);
+  border-bottom: 1px solid var(--design-blue);
   padding-bottom: 25px;
 
   @media (max-width: 1250px) {
     flex-direction: row;
     justify-content: space-between;
+    gap: 20px;
   }
   @media (max-width: 800px) {
     flex-direction: column;
@@ -74,13 +75,6 @@ font-family: var(--font-family);
 font-weight: bold;
 `;
 
-const Separator = styled.div`
-  width: 100%;
-  height: 1px;
-  background-color: var(--design-blue);
-  margin: 20px 0;
-`;
-
 const ConfirmationBox = styled.div`
   margin-top: 20px;
   padding: 10px;
@@ -96,6 +90,12 @@ const ButtonDiv = styled.div`
     justify-content: center;
   }
 `;
+
+const SocialsBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+`
 
 const ContactUs = () => {
   const { t } = useTranslation('common');
@@ -159,10 +159,10 @@ const ContactUs = () => {
               {t('contact-us.contact-us-now')}
             </Typography>
             <ContactInfosContainer>
-              <Stack direction="horizontal" alignItems="center" gap="20px">
+              <Stack direction="horizontal" alignItems="center" gap="10px">
                 <PhoneIcon style={{ width: '30px', height: '30px' }} />
                 <Typography
-                  fontSize="var(--font-small)"
+                  fontSize="var(--font-xsmall)"
                   color="var(--design-blue)"
                   whiteSpace="nowrap"
                 >
@@ -170,17 +170,17 @@ const ContactUs = () => {
                 </Typography>
               </Stack>
 
-              <Stack direction="horizontal" alignItems="center" gap="20px">
+              <Stack direction="horizontal" alignItems="center" gap="10px">
                 <EmailIcon style={{ width: '30px', height: '30px' }} />
                 <Typography
-                  fontSize="var(--font-small)"
+                  fontSize="var(--font-xsmall)"
                   color="var(--design-blue)"
                 >
                   <Link href="mailto:admin@kozzo.ca">admin@kozzo.ca</Link>
                 </Typography>
               </Stack>
             </ContactInfosContainer>
-            <Box>
+            <SocialsBox>
               <Typography
                 fontSize="var(--font-medium)"
                 color="var(--design-blue)"
@@ -196,7 +196,7 @@ const ContactUs = () => {
                   <CiInstagram size="40px" style={{ marginLeft: '-5px', cursor: 'pointer', color:'var(--design-blue)' }} />
                 </a>
               </Stack>
-            </Box>
+            </SocialsBox>
           </Stack>
         }
         <Stack
