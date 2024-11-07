@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a71e21c8.css",
-    "main.js": "/static/js/main.bb5a680b.js",
+    "main.css": "/static/css/main.9ab5244b.css",
+    "main.js": "/static/js/main.779da72d.js",
     "static/media/YuGothB.ttc": "/static/media/YuGothB.fe5452d077eaa6c3d7d7.ttc",
     "static/media/YuGothR.ttc": "/static/media/YuGothR.1c556f84ee19e073cd60.ttc",
     "static/media/YuGothM.ttc": "/static/media/YuGothM.feae6c71ca52368f4d27.ttc",
@@ -12,11 +12,11 @@
     "static/media/kozzo-logo-descripteur.png": "/static/media/kozzo-logo-descripteur.0d83dedf79f7378b36ea.png",
     "static/media/kozzo-logo-nom-coul.png": "/static/media/kozzo-logo-nom-coul.9f1bb65388cc36ba249b.png",
     "index.html": "/index.html",
-    "main.a71e21c8.css.map": "/static/css/main.a71e21c8.css.map",
-    "main.bb5a680b.js.map": "/static/js/main.bb5a680b.js.map"
+    "main.9ab5244b.css.map": "/static/css/main.9ab5244b.css.map",
+    "main.779da72d.js.map": "/static/js/main.779da72d.js.map"
   },
   "entrypoints": [
-    "static/css/main.a71e21c8.css",
-    "static/js/main.bb5a680b.js"
+    "static/css/main.9ab5244b.css",
+    "static/js/main.779da72d.js"
   ]
 }
