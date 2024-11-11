@@ -72,7 +72,7 @@ const HeroImage = styled.img`
     display: none;
   }
 
-  @media (max-height: 700px) {
+  @media (max-height: 600px) {
     display: none;
   }
 `;
